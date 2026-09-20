@@ -1,0 +1,9 @@
+[submodule "tf-a"]
+	path = tf-a
+	url = https://github.com/aviseqk/trusted-firmware-a.git
+[submodule "u-boot"]
+	path = u-boot
+	url = git@github.com:aviseqk/u-boot.git
+[submodule "linux"]
+	path = linux
+	url = git@github.com:aviseqk/linux.git
