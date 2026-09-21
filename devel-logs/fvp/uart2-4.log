@@ -1,0 +1,631 @@
+[0000 0]Negotiate FF-A Version 10002
+[0000 0]		GIC Initialisation started
+[0000 0]		GICv3 mode detected
+[0000 0]		GICv3 local and global initialisation done
+[0000 0]		GIC Initialisation completed
+[0000 0]===========================================================
+[0000 0]		***** FF-A v1.2 ACS EAC *****
+[0000 0]===========================================================
+[0000 0]Suite=setup_discovery : Test=ffa_features
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: VM2
+[0000 0]	Executing Test Setup client: SP1
+[0000 0]	Executing Test Setup client: SP2
+[0000 0]	Executing Test Setup client: SP3
+[0000 0]	Executing Test Setup client: SP4
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_version
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+[0000 0]	Executing Test Setup client: SP2
+[0000 0]	Executing Test Setup client: SP3
+[0000 0]	Executing Test Setup client: SP4
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_id_get
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_partition_info_get
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_rx_release
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_rxtx_map_and_unmap
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=rxtx_exclusive_access
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=direct_messaging : Test=ffa_direct_message_32
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=direct_messaging : Test=ffa_direct_message_64
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=direct_messaging : Test=ffa_direct_message_error
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Skipping the check, required endpoint not found
+[0000 0]	Executing Test Setup client: SP1
+Result=Skipped (Skip code=103)
+***********************************
+[0000 0]Suite=direct_messaging : Test=ffa_direct_message_error1
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Skipping the check, required endpoint not found
+Result=Skipped (Skip code=103)
+***********************************
+[0000 0]Suite=memory_management : Test=ffa_mem_share
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: SP2 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_invalid_handle_tag
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_input_error_checks
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_2
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_3
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_5
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_rw_retrieve_ro
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_retrieve_align_hint_check
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_relinquish_input_checks
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=ffa_mem_lend
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: SP2 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_invalid_handle_tag
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_input_error_checks
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_input_error_checks2
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_align_hint_check
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks3
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_ro_retrieve_rw
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_rw_retrieve_ro
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=ffa_mem_donate
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: SP2 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_input_error_checks3
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_invalid_handle_tag
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_retrieve_input_checks2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=relinquish_state_machine_2
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=relinquish_state_machine_5
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=reclaim_input_error_checks
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=reclaim_zero_flag
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_retrieve_input_checks4
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_retrieve_input_checks6
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_input_error_checks3
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks6
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_3
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_5
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_state_machine_1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_state_machine_2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_state_machine_4
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_retrieve_input_checks3
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_state_machine_5
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_state_machine_3
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_6
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_4
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_state_machine_1
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=relinquish_state_machine_3
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=relinquish_state_machine_4
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks9
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_6
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_4
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_state_machine_1
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_input_error_checks1
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_multiple_retrievals
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks5
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_input_error_checks
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks4
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_input_error_checks2
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_multiple_retrievals
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_retrieve_input_checks1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_input_error_checks1
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_input_error_checks2
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=donate_input_error_checks4
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_retrieve_input_checks8
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=lend_input_error_checks4
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=mp_execution_contexts
+[0000 0]	Executing Test Setup client: VM1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=up_migrate_capable
+[0000 0]	Executing Test Setup client: VM1 server: SP3
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_features_intr
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_features_nsbit
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_spm_id_get
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=direct_messaging : Test=direct_msg_sp_to_vm
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=indirect_messaging : Test=ffa_msg_send2
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=indirect_messaging : Test=ffa_msg_send2_sp
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_security_state_ns_bit_retrieve_check
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_security_state_ns_bit_share_invalid
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: VM1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_security_state_ns_bit_lend_invalid
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: VM1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_security_state_ns_bit_donate_invalid
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: VM1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=ffa_mem_perm_set
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=ffa_mem_perm_get
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_bitmap_create
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_bitmap_destroy
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_bind
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_unbind
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_get
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_set
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_info_get
+[0000 0]	Executing Test Setup client: SP1
+[0000 0]	Executing Test Setup client: VM1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=notification_comp
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]	Executing Test Setup client: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=vm_to_sp_notification_el0
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=notifications : Test=vm_to_sp_notification_pcpu_el0
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]		WARN: No Support for per vCPU Notification
+Result=Skipped (Skip code=103)
+***********************************
+[0000 0]Suite=interrupts : Test=vm_to_sp_preempt
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=interrupts : Test=ns_intr_queued
+[0000 0]	Executing Test Setup client: VM1 server: SP3
+Result=Passed
+***********************************
+[0000 0]Suite=interrupts : Test=sp_el0_blocked
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=interrupts : Test=sp_el0_running
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: SP2 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=interrupts : Test=sp_waiting_el0
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]		Timer frequency = 0x5F5E100 Sleeping for 100 milliseconds
+[0000 0]	Executing Test Setup client: SP2 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=interrupts : Test=sp_preempted_el0
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]		Timer frequency = 0x5F5E100 Sleeping for 10 milliseconds
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_version_negotiation
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]		ERROR: Relayer Must Return Error For Version Re-Negotiation fid 0 arg2 0
+[0000 0]		ERROR: 	Check failed at /home/zephyr/FFA/workspaces/kvm-ffa-guest-relay/ff-a-acs/test/v1.2/setup_discovery/ffa_version_negotiation/ffa_version_negotiation_client.c ,line:22
+Result=Failed (Error code=1)
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_msg_wait_rx_buff_rel
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+Result=Passed
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_partition_info_get_regs
+[0000 0]	Executing Test Setup client: VM1
+[0000 0]		ERROR: Endpoint-id=8002 info not found
+[0000 0]		ERROR: 	Check failed at /home/zephyr/FFA/workspaces/kvm-ffa-guest-relay/ff-a-acs/test/v1.2/setup_discovery/ffa_partition_info_get_regs/ffa_partition_info_get_regs_client.c ,line:140
+[0000 0]		ERROR: Endpoint-id=8004 info not found
+[0000 0]		ERROR: 	Check failed at /home/zephyr/FFA/workspaces/kvm-ffa-guest-relay/ff-a-acs/test/v1.2/setup_discovery/ffa_partition_info_get_regs/ffa_partition_info_get_regs_client.c ,line:140
+Result=Failed (Error code=20)
+***********************************
+[0000 0]Suite=setup_discovery : Test=ffa_partition_info_get_lsp
+[0000 0]	Executing Test Setup client: SP1
+Result=Failed (Error code=17)
+***********************************
+[0000 0]Suite=memory_management : Test=mem_share_impdef
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_lend_impdef
+[0000 0]	Executing Test Setup client: VM1 server: SP2
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=mem_donate_impdef
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=memory_management : Test=share_multi_borrower_flag_check
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]	Executing Test Setup client: VM1 server: VM2
+[0000 0]	Executing Test Setup client: SP1 server: SP2
+Result=Passed
+***********************************
+[0000 0]Suite=direct_messaging : Test=ffa_direct_message2
+[0000 0]	Executing Test Setup client: VM1 server: SP1
+[0000 0]Select Server UUID 0x1e67b5b4 0xe14f904a 0x13fb1fb8 0xcbdae1da
+[0000 0]		ERROR: Direct request failed, fid=0x84000060, err 0xffffffff
+[0000 0]		ERROR: 	Check failed at /home/zephyr/FFA/workspaces/kvm-ffa-guest-relay/ff-a-acs/test/v1.2/direct_messaging/ffa_direct_message2/ffa_direct_message2_client.c ,line:67
+Result=Failed (Error code=3)
+***********************************
+
+
+REGRESSION REPORT: 
+==========================
+   TOTAL TESTS     : 113
+   TOTAL PASSED    : 106
+   TOTAL FAILED    : 4
+   TOTAL SKIPPED   : 3
+   TOTAL SIM ERROR : 0
+==========================
+******* END OF ACS *******
+
+[0000 0]Entering standby.. 
