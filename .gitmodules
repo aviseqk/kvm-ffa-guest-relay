@@ -7,3 +7,9 @@
 [submodule "linux"]
 	path = linux
 	url = git@github.com:aviseqk/linux.git
+[submodule "hafnium"]
+	path = hafnium
+	url = git@github.com:aviseqk/hafnium.git
+[submodule "ff-a-acs"]
+	path = ff-a-acs
+	url = git@github.com:aviseqk/ff-a-acs.git
