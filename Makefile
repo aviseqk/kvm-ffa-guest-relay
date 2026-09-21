@@ -10,13 +10,21 @@ all:	build
 
 build:	tf-a
 
-tf-a:	u-boot
+tf-a:	u-boot hafnium
 	@echo "Building TF-A + FIP"
 	./scripts/build-tfa.sh
 
 u-boot:
 	@echo "Building U-Boot"
 	./scripts/build-uboot.sh
+
+hafnium:
+	@echo "Building Hafnium"
+	./scripts/build-hafnium.sh
+
+ffa-acs-tests:
+	@echo "Building FFA-ACS-SPs"
+	./scripts/build-ff-a-acs.sh
 
 run: 	
 	@echo "Launching Arm FVP"
