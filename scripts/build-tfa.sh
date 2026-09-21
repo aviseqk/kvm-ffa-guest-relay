@@ -49,7 +49,7 @@ echo " $BL32"
 # NOTE: FF-A ACS's EL0 provided SP layout file: 	SP_LAYOUT="$ROOT/ff-a-acs/platform/manifest/tgt_tfa_fvp/sp_layout_el0_v12.json"
 # FF-A ACS's provided SP layout file for SP at EL1: SP_LAYOUT="$ROOT/ff-a-acs/platform/manifest/tgt_tfa_fvp/sp_layout_el0_v12.json"
 
-SP_LAYOUT="$ROOT/configs/sp-layout.json"
+SP_LAYOUT="$ROOT/configs/sp-at-el0-layout.json"
 
 mkdir -p $BUILD_BASE
 
