@@ -1,0 +1,22 @@
+{
+  "sp1" : {
+    "image": "../out/ff-a-acs/output/sp1.bin",
+    "pm": "../ff-a-acs/platform/manifest/tgt_tfa_fvp/v12/sp1.dts",
+    "owner": "SiP"
+  },
+  "sp2" : {
+    "image": "../out/ff-a-acs/output/sp2.bin",
+    "pm": "../ff-a-acs/platform/manifest/tgt_tfa_fvp/v12/sp2.dts",
+    "owner": "SiP"
+  },
+  "sp3" : {
+    "image": "../out/ff-a-acs/output/sp3.bin",
+    "pm": "../ff-a-acs/platform/manifest/tgt_tfa_fvp/v12/sp3.dts",
+    "owner": "SiP"
+  },
+  "sp4" : {
+    "image": "../out/ff-a-acs/output/sp4.bin",
+    "pm": "../ff-a-acs/platform/manifest/tgt_tfa_fvp/v12/sp4.dts",
+    "owner": "SiP"
+  }
+}
