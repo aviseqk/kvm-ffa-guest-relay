@@ -13,3 +13,6 @@
 [submodule "ff-a-acs"]
 	path = ff-a-acs
 	url = git@github.com:aviseqk/ff-a-acs.git
+[submodule "buildroot"]
+	path = buildroot
+	url = https://github.com/buildroot/buildroot.git
