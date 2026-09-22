@@ -17,10 +17,10 @@ CROSS_COMPILE=aarch64-none-linux-gnu-
 BUILD_TYPE=debug
 
 # UBoot artifacts
-#BL33="$ROOT/out/uboot/u-boot.bin"
+BL33="$ROOT/out/uboot/u-boot.bin"
 
 # TEST: swap ff-a-acs's vm1.bin as BL33 with U-Boot later post staging validation check of Secure World Stack
-BL33="$ROOT/out/ff-a-acs/output/vm1.bin"
+#BL33="$ROOT/out/ff-a-acs/output/vm1.bin"
 if [[ ! -f "$BL33" ]]; then
 	echo "ERROR: BL33 image not found!:"
 	echo " $BL33"
