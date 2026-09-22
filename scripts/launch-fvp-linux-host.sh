@@ -25,7 +25,10 @@ FVP_LINUX_HOST_BOOT_CONFIG=(
     --data cluster0.cpu0="$LINUX_HOST_INITRD@0x8fe00000"
 )
 
-LOG_DIR="$ROOT/devel-logs/fvp"
+LOG_ROOT="$ROOT/devel-logs/fvp"
+RUN_ID="$(date '+%Y-%m-%d_%H-%M-%S')"
+LOG_DIR="$LOG_ROOT/$RUN_ID"
+
 mkdir -p $LOG_DIR
 
 # Each UART gets its own Kitty terminal. Telnet connects to the FVP terminal server.
@@ -52,11 +55,11 @@ FVP_TERMINAL_CONFIG=(
 	-C pci.pci_smmuv3.mmu.SMMU_S_IDR2=0 -C pci.pci_smmuv3.mmu.SMMU_S_IDR3=0 \
 	-C bp.ve_sysregs.mmbSiteDefault=0 -C bp.ve_sysregs.exit_on_shutdown=1 \
 	-C bp.pl011_uart0.untimed_fifos=1 -C bp.pl011_uart0.unbuffered_output=1 \
-	-C bp.pl011_uart0.out_file="$LOG_DIR/uart0-9.log" \
+	-C bp.pl011_uart0.out_file="$LOG_DIR/uart0.log" \
 	-C bp.pl011_uart1.untimed_fifos=1 -C bp.pl011_uart1.unbuffered_output=1 \
-	-C bp.pl011_uart1.out_file="$LOG_DIR/uart1-9.log" \
+	-C bp.pl011_uart1.out_file="$LOG_DIR/uart1.log" \
 	-C bp.pl011_uart2.untimed_fifos=1 -C bp.pl011_uart2.unbuffered_output=1 \
-	-C bp.pl011_uart2.out_file="$LOG_DIR/uart2-9.log" \
+	-C bp.pl011_uart2.out_file="$LOG_DIR/uart2.log" \
 	-C bp.secureflashloader.fname="$BL1" \
 	-C bp.flashloader0.fname="$FIP" \
 	-C cluster0.gicv3.extended-interrupt-range-support=1 -C cluster1.gicv3.extended-interrupt-range-support=1 \
