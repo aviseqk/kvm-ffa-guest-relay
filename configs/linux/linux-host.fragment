@@ -1,0 +1,11 @@
+# Fragment of linux defconfigs (applied on top of the linux arm64 base defconfig) for Linux KVM Host Kernel
+
+
+# Enable Modules Support
+CONFIG_MODULES=y
+
+# Enable Virtualization
+CONFIG_VIRTUALIZATION=y
+CONFIG_KVM=y
+
+CONFIG_VIRTIO=y
