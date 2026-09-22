@@ -1,0 +1,937 @@
+VERBOSE: Region: 0x4001000 - 0x4060000 has attributes 0xa
+VERBOSE: Region: 0x0 - 0x6000 has attributes 0x2
+VERBOSE: Region: 0x6000 - 0x8000 has attributes 0x42
+NOTICE:  Booting Trusted Firmware
+NOTICE:  BL1: v2.15.0(debug):a5c580fd5
+NOTICE:  BL1: Built : 22:28:02, Sep 21 2026
+INFO:    BL1: RAM 0x4053000 - 0x405a000
+VERBOSE: FCONF: Loading config with image ID: 32
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=32 at address 0x4001010
+INFO:    Image id=32 loaded: 0x4001010 - 0x400125f
+INFO:    FCONF: Config file with image ID:32 loaded at address = 0x4001010
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: Loading config with image ID: 24
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=24 at address 0x4001300
+INFO:    Image id=24 loaded: 0x4001300 - 0x40015b0
+INFO:    FCONF: Config file with image ID:24 loaded at address = 0x4001300
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+INFO:    BL1: Loading BL2
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=1 at address 0x4034000
+INFO:    Image id=1 loaded: 0x4034000 - 0x403cbf8
+VERBOSE: BL1: BL2 memory layout address = 0x4001000
+NOTICE:  BL1: Booting BL2
+INFO:    Entry point address = 0x4034000
+INFO:    SPSR = 0x3c5
+VERBOSE: Argument #0 = 0x4001010
+VERBOSE: Argument #1 = 0x4001000
+VERBOSE: Argument #2 = 0x0
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+VERBOSE: Region: 0x4001000 - 0x4053000 has attributes 0xa
+VERBOSE: Region: 0x4034000 - 0x403a000 has attributes 0x2
+VERBOSE: Region: 0x403a000 - 0x403c000 has attributes 0x42
+VERBOSE: Region: 0x4001000 - 0x4003000 has attributes 0xa
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x4001010
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x4001300
+INFO:    FCONF: Reading firmware configuration information for: arm_sp
+VERBOSE: FCONF: fconf_populate_arm_sp UUID b4b5671e-4a90-4fe1-b81f-fb13dae1dacb load_addr=7000000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID d1582309-f023-47b9-827c-4464f5578fc8 load_addr=7200000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID 79b55c73-1d8c-44b9-8593-61e1770ad8d2 load_addr=7400000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID a4cd5826-e113-67cf-f910-cd491368ef31 load_addr=7600000
+NOTICE:  BL2: v2.15.0(debug):a5c580fd5
+NOTICE:  BL2: Built : 22:28:02, Sep 21 2026
+INFO:    BL2: Doing platform setup
+INFO:    Configuring TrustZone Controller
+VERBOSE: TrustZone : Configuring region 0 (TZC Interface Base=0x2a4a0000 sec_attr=0x0, ns_devs=0x0)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 1)...
+VERBOSE: TrustZone : ... base = ff000000, top = ffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x3, ns_devs = 0x0)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 2)...
+VERBOSE: TrustZone : ... base = 80000000, top = feffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 3)...
+VERBOSE: TrustZone : ... base = 880000000, top = fffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 4)...
+VERBOSE: TrustZone : ... base = 8800000000, top = ffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 5)...
+VERBOSE: TrustZone : ... base = 88000000000, top = fffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 6)...
+VERBOSE: TrustZone : ... base = 880000000000, top = ffffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 7)...
+VERBOSE: TrustZone : ... base = 8800000000000, top = fffffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+INFO:    Total 8 regions set.
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+INFO:    BL2: Loading image id 3
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=3 at address 0x4003000
+INFO:    Image id=3 loaded: 0x4003000 - 0x40171b8
+INFO:    BL2: Loading image id 23
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=23 at address 0x7f00000
+INFO:    Image id=23 loaded: 0x7f00000 - 0x7f02aac
+INFO:    BL2: Loading image id 25
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=25 at address 0x4001300
+INFO:    Image id=25 loaded: 0x4001300 - 0x4001348
+INFO:    BL2: Loading image id 4
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=4 at address 0x6000000
+INFO:    Image id=4 loaded: 0x6000000 - 0x60384f8
+INFO:    BL2: Skip loading image id 21
+INFO:    BL2: Skip loading image id 22
+INFO:    BL2: Loading image id 26
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=26 at address 0x4001500
+INFO:    Image id=26 loaded: 0x4001500 - 0x4001cd1
+INFO:    BL2: Loading image id 5
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=5 at address 0x88000000
+INFO:    Image id=5 loaded: 0x88000000 - 0x88075978
+INFO:    BL2: Loading image id 27
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=27 at address 0x80000000
+INFO:    Image id=27 loaded: 0x80000000 - 0x80000048
+INFO:    BL2: Loading image id 41
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=41 at address 0x7000000
+INFO:    Image id=41 loaded: 0x7000000 - 0x7063128
+INFO:    BL2: Loading image id 42
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=42 at address 0x7200000
+INFO:    Image id=42 loaded: 0x7200000 - 0x7263128
+INFO:    BL2: Loading image id 43
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=43 at address 0x7400000
+INFO:    Image id=43 loaded: 0x7400000 - 0x7463128
+INFO:    BL2: Loading image id 44
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=44 at address 0x7600000
+INFO:    Image id=44 loaded: 0x7600000 - 0x7663128
+NOTICE:  BL1: Booting BL31
+INFO:    Entry point address = 0x4003000
+INFO:    SPSR = 0x3cd
+VERBOSE: Argument #0 = 0x4002e78
+VERBOSE: Argument #1 = 0x4001010
+VERBOSE: Argument #2 = 0x7f00000
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+INFO:    BL31 FCONF: FW_CONFIG address = 4001010
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x4001010
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+VERBOSE: Skip SMMU GPC configuration.
+VERBOSE: Region: 0x4003000 - 0x4029000 has attributes 0xa
+VERBOSE: Region: 0x4003000 - 0x4014000 has attributes 0x2
+VERBOSE: Region: 0x4014000 - 0x4017000 has attributes 0x42
+VERBOSE: Region: 0x4028000 - 0x4029000 has attributes 0x8
+INFO:    FCONF: Reading HW_CONFIG firmware configuration file from: 0x7f00000
+INFO:    FCONF: Reading firmware configuration information for: pci_props
+WARNING: FCONF: Unable to locate 'pci' node
+INFO:    FCONF: Reading firmware configuration information for: dram_layout
+INFO:    FCONF: Reading firmware configuration information for: cpu_timer
+INFO:    FCONF: Reading firmware configuration information for: uart_config
+VERBOSE: FCONF: UART node address: a0000
+VERBOSE: DT: Translation lookup in node iofpga-bus@300000000 at offset 2636
+VERBOSE: DT: Address 0 mapped to 300000000 with range 210000
+VERBOSE: DT: child address 0mapped to 300000000 in parent bus
+VERBOSE: DT: Translation lookup in node motherboard-bus@8000000 at offset 2192
+VERBOSE: DT: Address 0 mapped to 8000000 with range 4000000
+VERBOSE: DT: Address 100000000 mapped to 14000000 with range 4000000
+VERBOSE: DT: Address 200000000 mapped to 18000000 with range 4000000
+VERBOSE: DT: Address 300000000 mapped to 1c000000 with range 4000000
+VERBOSE: DT: child address 300000000mapped to 1c000000 in parent bus
+VERBOSE: DT: Translation lookup in node bus@8000000 at offset 564
+VERBOSE: DT: Address 8000000 mapped to 8000000 with range 18000000
+VERBOSE: DT: child address 8000000mapped to 8000000 in parent bus
+VERBOSE: FCONF: UART serial device base address: 1c0a0000
+VERBOSE: FCONF: UART serial device clk frequency: 16e3600
+INFO:    FCONF: Reading firmware configuration information for: topology
+VERBOSE: CLUSTER ID: 0 cpu-count: 4
+VERBOSE: CLUSTER ID: 1 cpu-count: 4
+INFO:    FCONF: Reading firmware configuration information for: gicv3_config
+NOTICE:  BL31: v2.15.0(debug):a5c580fd5
+NOTICE:  BL31: Built : 22:28:03, Sep 21 2026
+INFO:    GICv3 without legacy support detected.
+INFO:    ARM GICv3 driver initialized in EL3
+INFO:    Maximum SPI INTID supported: 255
+INFO:    Maximum ESPI INTID supported: 5119
+INFO:    BL31: Initializing runtime services
+VERBOSE: Reading SPM Core manifest at address 0x4001500
+VERBOSE: SPM Core manifest attribute section:
+VERBOSE:   version: 1.2
+VERBOSE:   spmc_id: 0x8000
+VERBOSE:   binary_size: 0x80000
+VERBOSE:   load_address: 0x6000000
+VERBOSE:   entrypoint: 0x6000000
+VERBOSE: FFA version (1.2)
+VERBOSE: SPM Core run time EL2.
+VERBOSE: SPM Core execution state 0x0.
+INFO:    SPM Core setup done.
+INFO:    BL31: Initializing BL32
+VERBOSE: SPM Core init start.
+INFO: Initializing Hafnium (SPMC)
+INFO: text: 0x6000000 - 0x602e000
+INFO: rodata: 0x602e000 - 0x6038000
+INFO: data: 0x6038000 - 0x6146000
+INFO: stacks: 0x6150000 - 0x6160000
+INFO: Supported bits in physical address: 40
+INFO: Stage 2 has 4 page table levels with 2 pages at the root.
+INFO: Stage 1 has 5 page table levels with 1 pages at the root.
+VERBOSE: SPM(0): 0xc4000087 0x60016a4 0x0 0x0 0x0 0x0 0x0 0x0
+VERBOSE: spmd_pm_secondary_ep_register 60016a4
+INFO: Memory range:  0xfd000000 - 0xfeffffff
+INFO: Memory range:  0x7000000 - 0x7ffffff
+INFO: Memory range:  0xff000000 - 0xffffffff
+INFO: Arm SMMUv3 initialized
+INFO: Unable to find '/interrupt-controller. Using default configuration.'
+INFO: Loading VM id 0x8001: ff-a-acs SP1 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7000000.
+INFO: Loading VM id 0x8002: ff-a-acs SP2 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7200000.
+INFO: Loading VM id 0x8003: ff-a-acs SP3 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7400000.
+INFO: Loading VM id 0x8004: ff-a-acs SP4 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7600000.
+VERBOSE: SPM(0): 0x84000069 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+INFO: Hafnium initialisation completed
+[8001 0] EL0 entry.. id 8001
+[8002 0] EL0 entry.. id 8002
+[8003 0] EL0 entry.. id 8003
+[8004 0] EL0 entry.. id 8004
+NOTICE: Finished bootstrapping all SPs on CPU0
+VERBOSE: SPM(0): 0x8400006b 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+VERBOSE: SPM Core init end.
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x88000000
+INFO:    SPSR = 0x3c9
+VERBOSE: Argument #0 = 0x82000000
+VERBOSE: Argument #1 = 0x0
+VERBOSE: Argument #2 = 0x0
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+
+
+U-Boot 2026.07-gece349ade297 (Sep 21 2026 - 22:24:05 +0530) arm_fvp
+
+Model: FVP Base RevC
+DRAM:  1.9 GiB (total 3.9 GiB)
+Core:  25 devices, 13 uclasses, devicetree: board
+MMC:   
+Loading Environment from nowhere... OK
+In:    serial@90000
+Out:   serial@90000
+Err:   serial@90000
+Net:   No ethernet found.
+[2KHit any key to stop autoboot: 2[2KHit any key to stop autoboot: 0
+=> s booti 0x80080000 - 0x8fc00000
+Moving Image from 0x80080000 to 0x80200000, end=0x82b70000
+## Flattened Device Tree blob at 8fc00000
+   Booting using the fdt blob at 0x8fc00000
+Working FDT set to 8fc00000
+   Loading Device Tree to 00000000fa6f1000, end 00000000fa6f7562 ... OK
+Working FDT set to fa6f1000
+No RNG device
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd0f0]
+[    0.000000] Linux version 7.3.0-rc3-g518e5b794c06 (zephyr@storm) (aarch64-none-linux-gnu-gcc (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 15.2.1 20251203, GNU ld (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203) #1 SMP PREEMPT Mon Sep 21 21:01:39 IST 2026
+[    0.000000] KASLR disabled due to lack of seed
+[    0.000000] Machine model: FVP Base RevC
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000018000000, size 8192 KiB
+[    0.000000] OF: reserved mem: initialized node vram@18000000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000018000000..0x00000000187fffff (8192 KiB) nomap non-reusable vram@18000000
+[    0.000000] NUMA: Faking a node at [mem 0x0000000080000000-0x00000008ffffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x8ff806e00-0x8ff8094ff]
+[    0.000000] cma: Reserved 32 MiB at 0x00000000f8600000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.5
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000080000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x00000008ffffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x00000000fbffffff]
+[    0.000000]   node   0: [mem 0x0000000880000000-0x00000008ffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x00000008ffffffff]
+[    0.000000] On node 0, zone Normal: 16384 pages in unavailable ranges
+[    0.000000] percpu: Embedded 26 pages/cpu s67608 r8192 d30696 u106496
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Address authentication (IMP DEF algorithm)
+[    0.000000] CPU features: detected: GICv3 CPU interface
+[    0.000000] CPU features: detected: Virtualization Host Extensions
+[    0.000000] CPU features: detected: Memory Tagging Extension
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] printk: log buffer data + meta data: 131072 + 458752 = 589824 bytes
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f4600000-0x00000000f8600000] (64MB)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=8.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GIC: enabling workaround for GICv3: HIP07 erratum 161010803
+[    0.000000] GICv3: 224 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 80 PPIs
+[    0.000000] GICv3: GICD_CTLR.DS=0, SCR_EL3.FIQ=1
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x000000002f100000
+[    0.000000] ITS [mem 0x2f020000-0x2f03ffff]
+[    0.000000] ITS@0x000000002f020000: allocated 8192 Devices @8800b0000 (indirect, esz 8, psz 64K, shr 1)
+[    0.000000] ITS@0x000000002f020000: allocated 8192 Virtual CPUs @8800c0000 (indirect, esz 8, psz 64K, shr 1)
+[    0.000000] ITS@0x000000002f020000: allocated 8192 Interrupt Collections @8800d0000 (flat, esz 8, psz 64K, shr 1)
+[    0.000000] GICv3: using LPI property table @0x00000008800e0000
+[    0.000000] GICv3: CPU0: using allocated LPI pending table @0x00000008800f0000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.000000] timer_sp804: timer clock not found: -517
+[    0.000000] timer_sp804: arm,sp804 clock not found: -2
+[    0.000000] Failed to initialize '/bus@8000000/motherboard-bus@8000000/iofpga-bus@300000000/timer@110000': -22
+[    0.000000] timer_sp804: timer clock not found: -517
+[    0.000000] timer_sp804: arm,sp804 clock not found: -2
+[    0.000000] Failed to initialize '/bus@8000000/motherboard-bus@8000000/iofpga-bus@300000000/timer@120000': -22
+[    0.000000] arch_timer: [Firmware Bug]: VHE-capable CPU without EL2 virtual timer interrupt
+[    0.000000] arch_timer: cp15 timer running at 100.00MHz (hyp-phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0x1ffffffffffffff max_cycles: 0x171024e7e0, max_idle_ns: 440795205315 ns
+[    0.000002] sched_clock: 57 bits at 100MHz, resolution 10ns, wraps every 4398046511100ns
+[    0.003048] Console: colour dummy device 80x25
+[    0.003096] printk: legacy console [tty0] enabled
+[    0.010279] Calibrating delay loop (skipped), value calculated using timer frequency.. 200.00 BogoMIPS (lpj=400000)
+[    0.010482] pid_max: default: 32768 minimum: 301
+[    0.012254] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.012432] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.014638] VFS: Finished mounting rootfs on nullfs
+[    0.027901] rcu: Hierarchical SRCU implementation.
+[    0.027999] rcu: 	Max phase no-delay instances is 1000.
+[    0.029801] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.040665] EFI services will not be available.
+[    0.043918] smp: Bringing up secondary CPUs ...
+[    0.047340] Detected PIPT I-cache on CPU1
+[    0.048484] GICv3: CPU1: found redistributor 100 region 0:0x000000002f120000
+[    0.048544] GICv3: CPU1: using allocated LPI pending table @0x0000000880100000
+[    0.048655] CPU1: Booted secondary processor 0x0000000100 [0x410fd0f0]
+[    0.052471] Detected PIPT I-cache on CPU2
+[    0.053632] GICv3: CPU2: found redistributor 200 region 0:0x000000002f140000
+[    0.053692] GICv3: CPU2: using allocated LPI pending table @0x0000000880110000
+[    0.053803] CPU2: Booted secondary processor 0x0000000200 [0x410fd0f0]
+[    0.057634] Detected PIPT I-cache on CPU3
+[    0.058811] GICv3: CPU3: found redistributor 300 region 0:0x000000002f160000
+[    0.058872] GICv3: CPU3: using allocated LPI pending table @0x0000000880120000
+[    0.058983] CPU3: Booted secondary processor 0x0000000300 [0x410fd0f0]
+[    0.063116] Detected PIPT I-cache on CPU4
+[    0.064307] GICv3: CPU4: found redistributor 10000 region 0:0x000000002f180000
+[    0.064369] GICv3: CPU4: using allocated LPI pending table @0x0000000880130000
+[    0.064480] CPU4: Booted secondary processor 0x0000010000 [0x410fd0f0]
+[    0.068315] Detected PIPT I-cache on CPU5
+[    0.069522] GICv3: CPU5: found redistributor 10100 region 0:0x000000002f1a0000
+[    0.069581] GICv3: CPU5: using allocated LPI pending table @0x0000000880140000
+[    0.069695] CPU5: Booted secondary processor 0x0000010100 [0x410fd0f0]
+[    0.073835] Detected PIPT I-cache on CPU6
+[    0.075059] GICv3: CPU6: found redistributor 10200 region 0:0x000000002f1c0000
+[    0.075121] GICv3: CPU6: using allocated LPI pending table @0x0000000880150000
+[    0.075232] CPU6: Booted secondary processor 0x0000010200 [0x410fd0f0]
+[    0.079205] Detected PIPT I-cache on CPU7
+[    0.080444] GICv3: CPU7: found redistributor 10300 region 0:0x000000002f1e0000
+[    0.080507] GICv3: CPU7: using allocated LPI pending table @0x0000000880160000
+[    0.080618] CPU7: Booted secondary processor 0x0000010300 [0x410fd0f0]
+[    0.081272] smp: Brought up 1 node, 8 CPUs
+[    0.083776] SMP: Total of 8 processors activated.
+[    0.083884] CPU: All CPU(s) started at EL2
+[    0.083978] CPU features: detected: Branch Target Identification
+[    0.084096] CPU features: detected: 32-bit EL0 Support
+[    0.084199] CPU features: detected: 32-bit EL1 Support
+[    0.084308] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.084428] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.084584] CPU features: detected: Common not Private translations
+[    0.084705] CPU features: detected: CRC32 instructions
+[    0.084813] CPU features: detected: Data independent timing control (DIT)
+[    0.085056] CPU features: detected: E0PD
+[    0.085159] CPU features: detected: Enhanced Virtualization Traps
+[    0.085296] CPU features: detected: Generic authentication (IMP DEF algorithm)
+[    0.085440] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.085556] CPU features: detected: LSE atomic instructions
+[    0.085681] CPU features: detected: Privileged Access Never
+[    0.085795] CPU features: detected: PMUv3
+[    0.085894] CPU features: detected: RAS Extension Support
+[    0.086006] CPU features: detected: RASv1p1 Extension Support
+[    0.086124] CPU features: detected: Speculation barrier (SB)
+[    0.086238] CPU features: detected: Stage-2 Force Write-Back
+[    0.086356] CPU features: detected: TLB range maintenance instructions
+[    0.086481] CPU features: detected: XNX
+[    0.086770] alternatives: applying system-wide alternatives
+[    0.103899] CPU features: detected: ICV_DIR_EL1 trapping
+[    0.104011] CPU features: detected: Hardware dirty bit management on CPU0-7
+[    0.114268] Memory: 3898764K/4128768K available (17792K kernel code, 5642K rwdata, 14512K rodata, 3520K init, 700K bss, 189584K reserved, 32768K cma-reserved)
+[    0.117610] devtmpfs: initialized
+[    0.155167] posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.155747] futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+[    0.157838] 22160 pages in range for non-PLT usage
+[    0.157871] 513680 pages in range for PLT usage
+[    0.182426] DMI: not present or invalid.
+[    0.215516] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.220572] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.222040] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.222279] audit: initializing netlink subsys (disabled)
+[    0.222937] audit: type=2000 audit(0.196:1): state=initialized audit_enabled=0 res=1
+[    0.235438] thermal_sys: Registered thermal governor 'step_wise'
+[    0.235470] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.236019] cpuidle: using governor menu
+[    0.237300] hw-breakpoint: found 16 breakpoint and 16 watchpoint registers.
+[    0.238106] ASID allocator initialised with 65536 entries
+[    0.274683] Serial: AMBA PL011 UART driver
+[    0.342006] 1c090000.serial: ttyAMA0 MMIO:0x000000001c090000 (irq = 16, base_baud = 0) is a PL011 rev2
+[    0.342924] printk: console [ttyAMA0] enabled
+[    0.348308] 1c0a0000.serial: ttyAMA1 MMIO:0x000000001c0a0000 (irq = 17, base_baud = 0) is a PL011 rev2
+[    0.353652] 1c0b0000.serial: ttyAMA2 MMIO:0x000000001c0b0000 (irq = 18, base_baud = 0) is a PL011 rev2
+[    0.358958] 1c0c0000.serial: ttyAMA3 MMIO:0x000000001c0c0000 (irq = 19, base_baud = 0) is a PL011 rev2
+[    0.407339] /panel: Fixed dependency cycle(s) with /bus@8000000/motherboard-bus@8000000/iofpga-bus@300000000/clcd@1f0000
+[    0.407610] /bus@8000000/motherboard-bus@8000000/iofpga-bus@300000000/clcd@1f0000: Fixed dependency cycle(s) with /panel
+[    0.416178] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.416306] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.416445] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.416573] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.416711] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.416839] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.416978] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.417105] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.430717] ACPI: Interpreter disabled.
+[    0.458762] iommu: Default domain type: Translated
+[    0.458870] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.462362] SCSI subsystem initialized
+[    0.464678] usbcore: registered new interface driver usbfs
+[    0.465100] usbcore: registered new interface driver hub
+[    0.465390] usbcore: registered new device driver usb
+[    0.472181] pps_core: LinuxPPS API ver. 1 registered
+[    0.472289] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.472497] PTP clock support registered
+[    0.473598] EDAC MC: Ver: 3.0.0
+[    0.475444] scmi_core: SCMI protocol bus registered
+[    0.482407] FPGA manager framework
+[    0.489619] vgaarb: loaded
+[    0.491100] clocksource: Switched to clocksource arch_sys_counter
+[    0.492904] VFS: Disk quotas dquot_6.6.0
+[    0.493064] VFS: Dquot-cache hash table entries: 512 (4096 bytes)
+[    0.494765] pnp: PnP ACPI: disabled
+[    0.538937] NET: Registered PF_INET protocol family
+[    0.539885] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.592520] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.592994] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.593185] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.596387] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.601845] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.602196] UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.603980] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.605984] RPC: Registered named UNIX socket transport module.
+[    0.606100] RPC: Registered udp transport module.
+[    0.606204] RPC: Registered tcp transport module.
+[    0.606307] RPC: Registered tcp-with-tls transport module.
+[    0.606419] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.606552] PCI: CLS 0 bytes, default 64
+[    0.640831] kvm [1]: nv: 571 coarse grained trap handlers
+[    0.643049] kvm [1]: nv: 710 fine grained trap handlers
+[    0.647541] kvm [1]: IPA Size Limit: 40 bits
+[    0.647678] kvm [1]: vgic-v2@2c02f000
+[    0.647881] kvm [1]: GIC system register CPU interface enabled
+[    0.648018] kvm [1]: vgic interrupt IRQ9
+[    0.648230] kvm [1]: VHE mode initialized successfully
+[    0.656667] Initialise system trusted keyrings
+[    0.657505] workingset: timestamp_bits=42 (anon: 37) max_order=20 bucket_order=0 (anon: 0)
+[    0.659643] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.661351] NFS: Registering the id_resolver key type
+[    0.661938] Key type id_resolver registered
+[    0.662040] Key type id_legacy registered
+[    0.662269] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.662395] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.664803] Key type asymmetric registered
+[    0.664908] Asymmetric key parser 'x509' registered
+[    0.665149] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[    0.665295] io scheduler mq-deadline registered
+[    0.665416] io scheduler kyber registered
+[    0.665654] io scheduler bfq registered
+[    0.777351] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.784651] pci-host-generic 40000000.pci: host bridge /pci@40000000 ranges:
+[    0.784870] pci-host-generic 40000000.pci:      MEM 0x0050000000..0x005fffffff -> 0x0050000000
+[    0.785276] pci-host-generic 40000000.pci: ECAM at [mem 0x40000000-0x4fffffff] for [bus 00-ff]
+[    0.786167] pci-host-generic 40000000.pci: PCI host bridge to bus 0000:00
+[    0.786322] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.786470] pci_bus 0000:00: root bus resource [mem 0x50000000-0x5fffffff]
+[    0.786713] pci 0000:00:00.0: [13b5:00ba] type 00 class 0x060001 PCIe Root Complex Integrated Endpoint
+[    0.786970] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    0.787232] pci 0000:00:00.0: enabling Extended Tags
+[    0.787459] pci 0000:00:00.0: PME# supported from D3hot
+[    0.788801] pci 0000:00:01.0: [13b5:0def] type 01 class 0x060400 PCIe Root Port
+[    0.789021] pci 0000:00:01.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    0.789181] pci 0000:00:01.0: PCI bridge to [bus 00]
+[    0.789329] pci 0000:00:01.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.789500] pci 0000:00:01.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.789694] pci 0000:00:01.0: enabling Extended Tags
+[    0.789924] pci 0000:00:01.0: PME# supported from D3hot
+[    0.791335] pci 0000:00:02.0: [13b5:0def] type 01 class 0x060400 PCIe Root Port
+[    0.791554] pci 0000:00:02.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.791721] pci 0000:00:02.0: PCI bridge to [bus 00]
+[    0.791868] pci 0000:00:02.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.792040] pci 0000:00:02.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.792235] pci 0000:00:02.0: enabling Extended Tags
+[    0.792465] pci 0000:00:02.0: PME# supported from D3hot
+[    0.793845] pci 0000:00:03.0: [13b5:0def] type 01 class 0x060400 PCIe Root Port
+[    0.794064] pci 0000:00:03.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.794230] pci 0000:00:03.0: PCI bridge to [bus 00]
+[    0.794365] pci 0000:00:03.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.794549] pci 0000:00:03.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.794744] pci 0000:00:03.0: enabling Extended Tags
+[    0.794974] pci 0000:00:03.0: PME# supported from D3hot
+[    0.796416] pci 0000:00:04.0: [13b5:0def] type 01 class 0x060400 PCIe Root Port
+[    0.796634] pci 0000:00:04.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.796801] pci 0000:00:04.0: PCI bridge to [bus 00]
+[    0.796946] pci 0000:00:04.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.797119] pci 0000:00:04.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.797314] pci 0000:00:04.0: enabling Extended Tags
+[    0.797545] pci 0000:00:04.0: PME# supported from D3hot
+[    0.805439] pci 0000:00:1e.0: [13b5:ff80] type 00 class 0xff0000 PCIe Root Complex Integrated Endpoint
+[    0.805700] pci 0000:00:1e.0: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.805866] pci 0000:00:1e.0: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.806032] pci 0000:00:1e.0: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.806205] pci 0000:00:1e.0: enabling Extended Tags
+[    0.806449] pci 0000:00:1e.0: PME# supported from D3hot
+[    0.807856] pci 0000:00:1e.1: [13b5:ff80] type 00 class 0xff0000 PCIe Root Complex Integrated Endpoint
+[    0.808115] pci 0000:00:1e.1: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.808283] pci 0000:00:1e.1: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.808448] pci 0000:00:1e.1: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.808621] pci 0000:00:1e.1: enabling Extended Tags
+[    0.808865] pci 0000:00:1e.1: PME# supported from D3hot
+[    0.810242] pci 0000:00:1f.0: [0abc:aced] type 00 class 0x010601 PCIe Root Complex Integrated Endpoint
+[    0.810504] pci 0000:00:1f.0: BAR 0 [mem 0x00000000-0x00001fff]
+[    0.810663] pci 0000:00:1f.0: BAR 1 [mem 0x00000000-0x00001fff]
+[    0.810820] pci 0000:00:1f.0: BAR 2 [mem 0x00000000-0x00000fff]
+[    0.810978] pci 0000:00:1f.0: BAR 3 [mem 0x00000000-0x00001fff]
+[    0.811185] pci 0000:00:1f.0: BAR 4 [mem 0x00000000-0x00000fff]
+[    0.811342] pci 0000:00:1f.0: BAR 5 [mem 0x00000000-0x00001fff]
+[    0.811510] pci 0000:00:1f.0: enabling Extended Tags
+[    0.811744] pci 0000:00:1f.0: PME# supported from D3hot
+[    0.813063] pci 0000:00:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.813249] pci 0000:00:02.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.813434] pci 0000:00:03.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.813620] pci 0000:00:04.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.814233] pci 0000:01:00.0: [0abc:aced] type 00 class 0x010601 PCIe Endpoint
+[    0.814472] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x00001fff]
+[    0.814631] pci 0000:01:00.0: BAR 1 [mem 0x00000000-0x00001fff]
+[    0.814789] pci 0000:01:00.0: BAR 2 [mem 0x00000000-0x00000fff]
+[    0.814947] pci 0000:01:00.0: BAR 3 [mem 0x00000000-0x00001fff]
+[    0.815154] pci 0000:01:00.0: BAR 4 [mem 0x00000000-0x00000fff]
+[    0.815309] pci 0000:01:00.0: BAR 5 [mem 0x00000000-0x00001fff]
+[    0.815477] pci 0000:01:00.0: enabling Extended Tags
+[    0.815719] pci 0000:01:00.0: PME# supported from D3hot
+[    0.817102] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    0.817721] pci 0000:02:00.0: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.817963] pci 0000:02:00.0: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.818127] pci 0000:02:00.0: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.818292] pci 0000:02:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.818468] pci 0000:02:00.0: enabling Extended Tags
+[    0.818717] pci 0000:02:00.0: PME# supported from D3hot
+[    0.820148] pci 0000:02:00.4: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.820388] pci 0000:02:00.4: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.820555] pci 0000:02:00.4: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.820721] pci 0000:02:00.4: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.820895] pci 0000:02:00.4: enabling Extended Tags
+[    0.821144] pci 0000:02:00.4: PME# supported from D3hot
+[    0.822573] pci_bus 0000:02: busn_res: [bus 02-ff] end is updated to 02
+[    0.823230] pci 0000:03:00.0: [13b5:0def] type 01 class 0x060400 PCIe Switch Upstream Port
+[    0.823458] pci 0000:03:00.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.823625] pci 0000:03:00.0: PCI bridge to [bus 00]
+[    0.823769] pci 0000:03:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.823943] pci 0000:03:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.824141] pci 0000:03:00.0: enabling Extended Tags
+[    0.824371] pci 0000:03:00.0: PME# supported from D3hot
+[    0.825766] pci 0000:03:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.826384] pci 0000:04:00.0: [13b5:0def] type 01 class 0x060400 PCIe Switch Downstream Port
+[    0.826614] pci 0000:04:00.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.826781] pci 0000:04:00.0: PCI bridge to [bus 00]
+[    0.826929] pci 0000:04:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.827149] pci 0000:04:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.827347] pci 0000:04:00.0: enabling Extended Tags
+[    0.827579] pci 0000:04:00.0: PME# supported from D3hot
+[    0.828980] pci 0000:04:01.0: [13b5:0def] type 01 class 0x060400 PCIe Switch Downstream Port
+[    0.829210] pci 0000:04:01.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.829377] pci 0000:04:01.0: PCI bridge to [bus 00]
+[    0.829524] pci 0000:04:01.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.829696] pci 0000:04:01.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.829895] pci 0000:04:01.0: enabling Extended Tags
+[    0.830125] pci 0000:04:01.0: PME# supported from D3hot
+[    0.831578] pci 0000:04:02.0: [13b5:0def] type 01 class 0x060400 PCIe Switch Downstream Port
+[    0.831808] pci 0000:04:02.0: BAR 0 [mem 0x00000000-0x00000fff pref]
+[    0.831974] pci 0000:04:02.0: PCI bridge to [bus 00]
+[    0.832119] pci 0000:04:02.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.832293] pci 0000:04:02.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.832491] pci 0000:04:02.0: enabling Extended Tags
+[    0.832722] pci 0000:04:02.0: PME# supported from D3hot
+[    0.841568] pci 0000:04:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.841754] pci 0000:04:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.841938] pci 0000:04:02.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.842567] pci 0000:05:00.0: [0abc:aced] type 00 class 0x010601 PCIe Endpoint
+[    0.842808] pci 0000:05:00.0: BAR 0 [mem 0x00000000-0x00001fff]
+[    0.842967] pci 0000:05:00.0: BAR 1 [mem 0x00000000-0x00001fff]
+[    0.843178] pci 0000:05:00.0: BAR 2 [mem 0x00000000-0x00000fff]
+[    0.843336] pci 0000:05:00.0: BAR 3 [mem 0x00000000-0x00001fff]
+[    0.843494] pci 0000:05:00.0: BAR 4 [mem 0x00000000-0x00000fff]
+[    0.843651] pci 0000:05:00.0: BAR 5 [mem 0x00000000-0x00001fff]
+[    0.843819] pci 0000:05:00.0: enabling Extended Tags
+[    0.844060] pci 0000:05:00.0: PME# supported from D3hot
+[    0.845464] pci_bus 0000:05: busn_res: [bus 05-ff] end is updated to 05
+[    0.846125] pci 0000:06:00.0: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.846366] pci 0000:06:00.0: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.846533] pci 0000:06:00.0: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.846699] pci 0000:06:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.846861] pci 0000:06:00.0: enabling Extended Tags
+[    0.847172] pci 0000:06:00.0: PME# supported from D3hot
+[    0.848594] pci 0000:06:00.7: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.848834] pci 0000:06:00.7: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.849001] pci 0000:06:00.7: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.849167] pci 0000:06:00.7: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.849341] pci 0000:06:00.7: enabling Extended Tags
+[    0.849590] pci 0000:06:00.7: PME# supported from D3hot
+[    0.850952] pci_bus 0000:06: busn_res: [bus 06-ff] end is updated to 06
+[    0.851645] pci 0000:07:00.0: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.851885] pci 0000:07:00.0: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.852052] pci 0000:07:00.0: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.852218] pci 0000:07:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.852392] pci 0000:07:00.0: enabling Extended Tags
+[    0.852641] pci 0000:07:00.0: PME# supported from D3hot
+[    0.854050] pci 0000:07:00.3: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.854291] pci 0000:07:00.3: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.854458] pci 0000:07:00.3: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.854624] pci 0000:07:00.3: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.854798] pci 0000:07:00.3: enabling Extended Tags
+[    0.855048] pci 0000:07:00.3: PME# supported from D3hot
+[    0.856508] pci_bus 0000:07: busn_res: [bus 07-ff] end is updated to 07
+[    0.856686] pci_bus 0000:04: busn_res: [bus 04-ff] end is updated to 07
+[    0.856863] pci_bus 0000:03: busn_res: [bus 03-ff] end is updated to 07
+[    0.857474] pci 0000:08:00.0: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.857716] pci 0000:08:00.0: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.857881] pci 0000:08:00.0: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.858048] pci 0000:08:00.0: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.858222] pci 0000:08:00.0: enabling Extended Tags
+[    0.858471] pci 0000:08:00.0: PME# supported from D3hot
+[    0.860102] pci 0000:08:00.1: [13b5:ff80] type 00 class 0xff0000 PCIe Endpoint
+[    0.860341] pci 0000:08:00.1: BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.860508] pci 0000:08:00.1: BAR 2 [mem 0x00000000-0x00007fff 64bit]
+[    0.860674] pci 0000:08:00.1: BAR 4 [mem 0x00000000-0x00000fff 64bit]
+[    0.860847] pci 0000:08:00.1: enabling Extended Tags
+[    0.861096] pci 0000:08:00.1: PME# supported from D3hot
+[    0.862487] pci_bus 0000:08: busn_res: [bus 08-ff] end is updated to 08
+[    0.863159] pci 0000:00:01.0: bridge window [mem 0x50000000-0x500fffff]: assigned
+[    0.863351] pci 0000:00:02.0: bridge window [mem 0x50100000-0x501fffff]: assigned
+[    0.863542] pci 0000:00:03.0: bridge window [mem 0x50200000-0x506fffff]: assigned
+[    0.863732] pci 0000:00:04.0: bridge window [mem 0x50700000-0x507fffff]: assigned
+[    0.863927] pci 0000:00:1e.0: BAR 0 [mem 0x50800000-0x5083ffff 64bit]: assigned
+[    0.864136] pci 0000:00:1e.1: BAR 0 [mem 0x50840000-0x5087ffff 64bit]: assigned
+[    0.864343] pci 0000:00:1e.0: BAR 2 [mem 0x50880000-0x50887fff 64bit]: assigned
+[    0.864552] pci 0000:00:1e.1: BAR 2 [mem 0x50888000-0x5088ffff 64bit]: assigned
+[    0.864754] pci 0000:00:1f.0: BAR 0 [mem 0x50890000-0x50891fff]: assigned
+[    0.864930] pci 0000:00:1f.0: BAR 1 [mem 0x50892000-0x50893fff]: assigned
+[    0.865108] pci 0000:00:1f.0: BAR 3 [mem 0x50894000-0x50895fff]: assigned
+[    0.865285] pci 0000:00:1f.0: BAR 5 [mem 0x50896000-0x50897fff]: assigned
+[    0.865464] pci 0000:00:01.0: BAR 0 [mem 0x50898000-0x50898fff]: assigned
+[    0.865643] pci 0000:00:02.0: BAR 0 [mem 0x50899000-0x50899fff pref]: assigned
+[    0.865842] pci 0000:00:03.0: BAR 0 [mem 0x5089a000-0x5089afff pref]: assigned
+[    0.866039] pci 0000:00:04.0: BAR 0 [mem 0x5089b000-0x5089bfff pref]: assigned
+[    0.866242] pci 0000:00:1e.0: BAR 4 [mem 0x5089c000-0x5089cfff 64bit]: assigned
+[    0.866452] pci 0000:00:1e.1: BAR 4 [mem 0x5089d000-0x5089dfff 64bit]: assigned
+[    0.866656] pci 0000:00:1f.0: BAR 2 [mem 0x5089e000-0x5089efff]: assigned
+[    0.866836] pci 0000:00:1f.0: BAR 4 [mem 0x5089f000-0x5089ffff]: assigned
+[    0.867059] pci 0000:01:00.0: BAR 0 [mem 0x50000000-0x50001fff]: assigned
+[    0.867279] pci 0000:01:00.0: BAR 1 [mem 0x50002000-0x50003fff]: assigned
+[    0.867454] pci 0000:01:00.0: BAR 3 [mem 0x50004000-0x50005fff]: assigned
+[    0.867628] pci 0000:01:00.0: BAR 5 [mem 0x50006000-0x50007fff]: assigned
+[    0.867805] pci 0000:01:00.0: BAR 2 [mem 0x50008000-0x50008fff]: assigned
+[    0.867981] pci 0000:01:00.0: BAR 4 [mem 0x50009000-0x50009fff]: assigned
+[    0.868159] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.868300] pci 0000:00:01.0:   bridge window [mem 0x50000000-0x500fffff]
+[    0.868515] pci 0000:02:00.0: BAR 0 [mem 0x50100000-0x5013ffff 64bit]: assigned
+[    0.868721] pci 0000:02:00.4: BAR 0 [mem 0x50140000-0x5017ffff 64bit]: assigned
+[    0.868927] pci 0000:02:00.0: BAR 2 [mem 0x50180000-0x50187fff 64bit]: assigned
+[    0.869134] pci 0000:02:00.4: BAR 2 [mem 0x50188000-0x5018ffff 64bit]: assigned
+[    0.869339] pci 0000:02:00.0: BAR 4 [mem 0x50190000-0x50190fff 64bit]: assigned
+[    0.869547] pci 0000:02:00.4: BAR 4 [mem 0x50191000-0x50191fff 64bit]: assigned
+[    0.869751] pci 0000:00:02.0: PCI bridge to [bus 02]
+[    0.869892] pci 0000:00:02.0:   bridge window [mem 0x50100000-0x501fffff]
+[    0.870084] pci 0000:03:00.0: bridge window [mem 0x50200000-0x505fffff]: assigned
+[    0.870277] pci 0000:03:00.0: BAR 0 [mem 0x50600000-0x50600fff pref]: assigned
+[    0.870506] pci 0000:04:00.0: bridge window [mem 0x50200000-0x502fffff]: assigned
+[    0.870696] pci 0000:04:01.0: bridge window [mem 0x50300000-0x503fffff]: assigned
+[    0.870887] pci 0000:04:02.0: bridge window [mem 0x50400000-0x504fffff]: assigned
+[    0.871079] pci 0000:04:00.0: BAR 0 [mem 0x50500000-0x50500fff pref]: assigned
+[    0.871315] pci 0000:04:01.0: BAR 0 [mem 0x50501000-0x50501fff pref]: assigned
+[    0.871510] pci 0000:04:02.0: BAR 0 [mem 0x50502000-0x50502fff pref]: assigned
+[    0.871733] pci 0000:05:00.0: BAR 0 [mem 0x50200000-0x50201fff]: assigned
+[    0.871908] pci 0000:05:00.0: BAR 1 [mem 0x50202000-0x50203fff]: assigned
+[    0.872083] pci 0000:05:00.0: BAR 3 [mem 0x50204000-0x50205fff]: assigned
+[    0.872259] pci 0000:05:00.0: BAR 5 [mem 0x50206000-0x50207fff]: assigned
+[    0.872434] pci 0000:05:00.0: BAR 2 [mem 0x50208000-0x50208fff]: assigned
+[    0.872612] pci 0000:05:00.0: BAR 4 [mem 0x50209000-0x50209fff]: assigned
+[    0.872788] pci 0000:04:00.0: PCI bridge to [bus 05]
+[    0.872928] pci 0000:04:00.0:   bridge window [mem 0x50200000-0x502fffff]
+[    0.873146] pci 0000:06:00.0: BAR 0 [mem 0x50300000-0x5033ffff 64bit]: assigned
+[    0.873352] pci 0000:06:00.7: BAR 0 [mem 0x50340000-0x5037ffff 64bit]: assigned
+[    0.873557] pci 0000:06:00.0: BAR 2 [mem 0x50380000-0x50387fff 64bit]: assigned
+[    0.873764] pci 0000:06:00.7: BAR 2 [mem 0x50388000-0x5038ffff 64bit]: assigned
+[    0.873970] pci 0000:06:00.0: BAR 4 [mem 0x50390000-0x50390fff 64bit]: assigned
+[    0.874179] pci 0000:06:00.7: BAR 4 [mem 0x50391000-0x50391fff 64bit]: assigned
+[    0.874383] pci 0000:04:01.0: PCI bridge to [bus 06]
+[    0.874524] pci 0000:04:01.0:   bridge window [mem 0x50300000-0x503fffff]
+[    0.874739] pci 0000:07:00.0: BAR 0 [mem 0x50400000-0x5043ffff 64bit]: assigned
+[    0.874945] pci 0000:07:00.3: BAR 0 [mem 0x50440000-0x5047ffff 64bit]: assigned
+[    0.875192] pci 0000:07:00.0: BAR 2 [mem 0x50480000-0x50487fff 64bit]: assigned
+[    0.875399] pci 0000:07:00.3: BAR 2 [mem 0x50488000-0x5048ffff 64bit]: assigned
+[    0.875607] pci 0000:07:00.0: BAR 4 [mem 0x50490000-0x50490fff 64bit]: assigned
+[    0.875814] pci 0000:07:00.3: BAR 4 [mem 0x50491000-0x50491fff 64bit]: assigned
+[    0.876018] pci 0000:04:02.0: PCI bridge to [bus 07]
+[    0.876159] pci 0000:04:02.0:   bridge window [mem 0x50400000-0x504fffff]
+[    0.876333] pci 0000:03:00.0: PCI bridge to [bus 04-07]
+[    0.876479] pci 0000:03:00.0:   bridge window [mem 0x50200000-0x505fffff]
+[    0.876654] pci 0000:00:03.0: PCI bridge to [bus 03-07]
+[    0.876800] pci 0000:00:03.0:   bridge window [mem 0x50200000-0x506fffff]
+[    0.877015] pci 0000:08:00.0: BAR 0 [mem 0x50700000-0x5073ffff 64bit]: assigned
+[    0.877222] pci 0000:08:00.1: BAR 0 [mem 0x50740000-0x5077ffff 64bit]: assigned
+[    0.877427] pci 0000:08:00.0: BAR 2 [mem 0x50780000-0x50787fff 64bit]: assigned
+[    0.877633] pci 0000:08:00.1: BAR 2 [mem 0x50788000-0x5078ffff 64bit]: assigned
+[    0.877839] pci 0000:08:00.0: BAR 4 [mem 0x50790000-0x50790fff 64bit]: assigned
+[    0.878047] pci 0000:08:00.1: BAR 4 [mem 0x50791000-0x50791fff 64bit]: assigned
+[    0.878251] pci 0000:00:04.0: PCI bridge to [bus 08]
+[    0.878392] pci 0000:00:04.0:   bridge window [mem 0x50700000-0x507fffff]
+[    0.878572] pci_bus 0000:00: resource 4 [mem 0x50000000-0x5fffffff]
+[    0.878735] pci_bus 0000:01: resource 1 [mem 0x50000000-0x500fffff]
+[    0.878898] pci_bus 0000:02: resource 1 [mem 0x50100000-0x501fffff]
+[    0.879061] pci_bus 0000:03: resource 1 [mem 0x50200000-0x506fffff]
+[    0.879265] pci_bus 0000:04: resource 1 [mem 0x50200000-0x505fffff]
+[    0.879427] pci_bus 0000:05: resource 1 [mem 0x50200000-0x502fffff]
+[    0.879590] pci_bus 0000:06: resource 1 [mem 0x50300000-0x503fffff]
+[    0.879753] pci_bus 0000:07: resource 1 [mem 0x50400000-0x504fffff]
+[    0.879917] pci_bus 0000:08: resource 1 [mem 0x50700000-0x507fffff]
+[    1.233415] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.267245] msm_serial: driver initialized
+[    1.272329] SuperH (H)SCI(F) driver initialized
+[    1.274342] STM32 USART driver initialized
+[    1.304183] arm-smmu-v3 2b400000.iommu: command queue size <= 64 entries not supported
+[    1.353529] loop: module loaded
+[    1.353789] virtio_blk virtio0: 1/0/0 default/read/poll queues
+[    1.356527] virtio_blk virtio0: [vda] 0 512-byte logical blocks (0 B/0 B)
+[    1.369408] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    1.371911] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    1.374369] basic-mmio-gpio: Failed to locate of_node [id: -2]
+[    1.454136] megasas: 07.734.00.00-rc1
+[    1.471399] physmap-flash 8000000.flash: physmap platform flash device: [mem 0x08000000-0x0bffffff]
+[    1.471607] 8000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000089 Chip ID 0x000018
+[    1.471818] Intel/Sharp Extended Query Table at 0x0031
+[    1.471947] Intel/Sharp Extended Query Table at 0x0031
+[    1.472077] Using buffer write method
+[    1.472311] physmap-flash 8000000.flash: physmap platform flash device: [mem 0x0c000000-0x0fffffff]
+[    1.472520] 8000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000089 Chip ID 0x000018
+[    1.472746] Intel/Sharp Extended Query Table at 0x0031
+[    1.472875] Intel/Sharp Extended Query Table at 0x0031
+[    1.473005] Using buffer write method
+[    1.473165] Concatenating MTD devices:
+[    1.473251] (0): "8000000.flash"
+[    1.473352] (1): "8000000.flash"
+[    1.473450] into device "8000000.flash"
+[    1.546354] tun: Universal TUN/TAP device driver, 1.6
+[    1.550110] VFIO - User Level meta-driver version: 0.3
+[    1.592967] usbcore: registered new interface driver usb-storage
+[    1.632237] rtc-pl031 1c170000.rtc: registered as rtc0
+[    1.632411] rtc-pl031 1c170000.rtc: setting system clock to 2026-09-21T17:42:52 UTC (1790012572)
+[    1.640198] i2c_dev: i2c /dev entries driver
+[    1.699429] sp805-wdt 1c0f0000.watchdog: registration successful
+[    1.738281] mmci-pl18x 1c050000.mmc: Got CD GPIO
+[    1.738606] mmci-pl18x 1c050000.mmc: Got WP GPIO
+[    1.740587] mmci-pl18x 1c050000.mmc: mmc0: PL180 manf 41 rev0 at 0x1c050000 irq 28,29 (pio)
+[    1.797062] SMCCC: SOC_ID: ID = jep106:043b:0000 Revision = 0x00000002
+[    1.806372] clocksource: arch_mmio_counter: mask: 0xffffffffffffff max_cycles: 0x171024e7e0, max_idle_ns: 440795205315 ns
+[    1.806570] arch-timer-mmio 2a810000.timer: mmio timer running at 100.00MHz (phys)
+[    1.810027] usbcore: registered new interface driver usbhid
+[    1.810144] usbhid: USB HID core driver
+[    1.853249] hw perfevents: enabled with armv8_pmuv3 PMU driver, 9 (0,800000ff) counters available
+[    1.911987] NET: Registered PF_INET6 protocol family
+[    1.916228] Segment Routing with IPv6
+[    1.916660] In-situ OAM (IOAM) with IPv6
+[    1.917045] NET: Registered PF_PACKET protocol family
+[    1.917994] Key type dns_resolver registered
+[    1.930486] input: AT Raw Set 2 keyboard as /devices/platform/bus@8000000/bus@8000000:motherboard-bus@8000000/bus@8000000:motherboard-bus@8000000:iofpga-bus@300000000/1c060000.kmi/serio0/input/input0
+[    2.156077] registered taskstats version 1
+[    2.157748] Loading compiled-in X.509 certificates
+[    2.235896] Demotion targets for Node 0: null
+[    2.243301] clk: Disabling unused clocks
+[    2.243407] PM: genpd: Disabling unused power domains
+[    3.569536] input: PS/2 Generic Mouse as /devices/platform/bus@8000000/bus@8000000:motherboard-bus@8000000/bus@8000000:motherboard-bus@8000000:iofpga-bus@300000000/1c070000.kmi/serio1/input/input2
+[    3.571455] /dev/root: Can't lookup blockdev
+[    3.571574] VFS: Cannot open root device "" or unknown-block(0,0): error -19
+[    3.571708] Please append a correct "root=" boot option; here are the available partitions:
+[    3.571874] 1f00          131072 mtdblock0 
+[    3.571923]  (driver?)
+[    3.572069] List of all bdev 
+** replaying previous printk message **
+[    3.572069] List of all bdev filesystems:
+[    3.572161]  ext3
+[    3.572189]  ext2
+[    3.572267]  ext4
+[    3.572345]  squashfs
+[    3.572424]  vfat
+[    3.572505] 
+[    3.572632] Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
+[    3.573004] CPU: 2 UID: 0 PID: 1 Comm: swapper/0 Not tainted 7.3.0-rc3-g518e5b794c06 #1 PREEMPT 
+[    3.573160] Hardware name: FVP Base RevC (DT)
+[    3.573240] Call trace:
+[    3.573302]  show_stack+0x18/0x24 (C)
+[    3.573427]  dump_stack_lvl+0x60/0x80
+[    3.573561]  dump_stack+0x18/0x24
+[    3.573691]  vpanic+0x290/0x474
+[    3.573817]  do_panic_on_target_cpu+0x0/0x1c
+[    3.573954]  mount_root_generic+0x1f0/0x2a4
+[    3.574096]  mount_root+0x20c/0x24c
+[    3.574231]  prepare_namespace+0x1c4/0x250
+[    3.574372]  kernel_init_freeable+0x2b4/0x2d8
+[    3.574514]  kernel_init+0x2c/0x130
+[    3.574657]  ret_from_fork+0x10/0x20
+[    3.574795] SMP: stopping secondary CPUs
+[    3.575951] Kernel Offset: disabled
+[    3.576086] CPU features: 0x0,00000000,0030082a,9b180a43,288ce73f
+[    3.576278] Memory Limit: none
+[    3.576432] ---[ end Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0) ]---

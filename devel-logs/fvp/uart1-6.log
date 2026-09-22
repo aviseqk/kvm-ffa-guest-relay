@@ -1,0 +1,12 @@
+INFO:    PSCI Power Domain Map:
+INFO:      Domain Node : Level 2, parent_node 4294967295, State ON (0x0)
+INFO:      Domain Node : Level 1, parent_node 0, State ON (0x0)
+INFO:      Domain Node : Level 1, parent_node 0, State OFF (0x2)
+INFO:      CPU Node : MPID 0x0, parent_node 1, State ON (0x0)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 1, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 1, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 1, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 2, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 2, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 2, State OFF (0x2)
+INFO:      CPU Node : MPID 0xffffffffffffffff, parent_node 2, State OFF (0x2)

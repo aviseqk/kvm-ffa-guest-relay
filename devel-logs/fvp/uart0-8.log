@@ -1,0 +1,359 @@
+VERBOSE: Region: 0x4001000 - 0x4060000 has attributes 0xa
+VERBOSE: Region: 0x0 - 0x6000 has attributes 0x2
+VERBOSE: Region: 0x6000 - 0x8000 has attributes 0x42
+NOTICE:  Booting Trusted Firmware
+NOTICE:  BL1: v2.15.0(debug):a5c580fd5
+NOTICE:  BL1: Built : 22:28:02, Sep 21 2026
+INFO:    BL1: RAM 0x4053000 - 0x405a000
+VERBOSE: FCONF: Loading config with image ID: 32
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=32 at address 0x4001010
+INFO:    Image id=32 loaded: 0x4001010 - 0x400125f
+INFO:    FCONF: Config file with image ID:32 loaded at address = 0x4001010
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: Loading config with image ID: 24
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=24 at address 0x4001300
+INFO:    Image id=24 loaded: 0x4001300 - 0x40015b0
+INFO:    FCONF: Config file with image ID:24 loaded at address = 0x4001300
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+INFO:    BL1: Loading BL2
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=1 at address 0x4034000
+INFO:    Image id=1 loaded: 0x4034000 - 0x403cbf8
+VERBOSE: BL1: BL2 memory layout address = 0x4001000
+NOTICE:  BL1: Booting BL2
+INFO:    Entry point address = 0x4034000
+INFO:    SPSR = 0x3c5
+VERBOSE: Argument #0 = 0x4001010
+VERBOSE: Argument #1 = 0x4001000
+VERBOSE: Argument #2 = 0x0
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+VERBOSE: Region: 0x4001000 - 0x4053000 has attributes 0xa
+VERBOSE: Region: 0x4034000 - 0x403a000 has attributes 0x2
+VERBOSE: Region: 0x403a000 - 0x403c000 has attributes 0x42
+VERBOSE: Region: 0x4001000 - 0x4003000 has attributes 0xa
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x4001010
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x4001300
+INFO:    FCONF: Reading firmware configuration information for: arm_sp
+VERBOSE: FCONF: fconf_populate_arm_sp UUID b4b5671e-4a90-4fe1-b81f-fb13dae1dacb load_addr=7000000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID d1582309-f023-47b9-827c-4464f5578fc8 load_addr=7200000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID 79b55c73-1d8c-44b9-8593-61e1770ad8d2 load_addr=7400000
+VERBOSE: FCONF: fconf_populate_arm_sp UUID a4cd5826-e113-67cf-f910-cd491368ef31 load_addr=7600000
+NOTICE:  BL2: v2.15.0(debug):a5c580fd5
+NOTICE:  BL2: Built : 22:28:02, Sep 21 2026
+INFO:    BL2: Doing platform setup
+INFO:    Configuring TrustZone Controller
+VERBOSE: TrustZone : Configuring region 0 (TZC Interface Base=0x2a4a0000 sec_attr=0x0, ns_devs=0x0)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 1)...
+VERBOSE: TrustZone : ... base = ff000000, top = ffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x3, ns_devs = 0x0)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 2)...
+VERBOSE: TrustZone : ... base = 80000000, top = feffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 3)...
+VERBOSE: TrustZone : ... base = 880000000, top = fffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 4)...
+VERBOSE: TrustZone : ... base = 8800000000, top = ffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 5)...
+VERBOSE: TrustZone : ... base = 88000000000, top = fffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 6)...
+VERBOSE: TrustZone : ... base = 880000000000, top = ffffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+VERBOSE: TrustZone : Configuring region (TZC Interface Base: 0x2a4a0000, region_no = 7)...
+VERBOSE: TrustZone : ... base = 8800000000000, top = fffffffffffff,
+VERBOSE: TrustZone : ... sec_attr = 0x0, ns_devs = 0x83038303)
+INFO:    Total 8 regions set.
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+INFO:    BL2: Loading image id 3
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=3 at address 0x4003000
+INFO:    Image id=3 loaded: 0x4003000 - 0x40171b8
+INFO:    BL2: Loading image id 23
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=23 at address 0x7f00000
+INFO:    Image id=23 loaded: 0x7f00000 - 0x7f02aac
+INFO:    BL2: Loading image id 25
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=25 at address 0x4001300
+INFO:    Image id=25 loaded: 0x4001300 - 0x4001348
+INFO:    BL2: Loading image id 4
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=4 at address 0x6000000
+INFO:    Image id=4 loaded: 0x6000000 - 0x60384f8
+INFO:    BL2: Skip loading image id 21
+INFO:    BL2: Skip loading image id 22
+INFO:    BL2: Loading image id 26
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=26 at address 0x4001500
+INFO:    Image id=26 loaded: 0x4001500 - 0x4001cd1
+INFO:    BL2: Loading image id 5
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=5 at address 0x88000000
+INFO:    Image id=5 loaded: 0x88000000 - 0x88075978
+INFO:    BL2: Loading image id 27
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=27 at address 0x80000000
+INFO:    Image id=27 loaded: 0x80000000 - 0x80000048
+INFO:    BL2: Loading image id 41
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=41 at address 0x7000000
+INFO:    Image id=41 loaded: 0x7000000 - 0x7063128
+INFO:    BL2: Loading image id 42
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=42 at address 0x7200000
+INFO:    Image id=42 loaded: 0x7200000 - 0x7263128
+INFO:    BL2: Loading image id 43
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=43 at address 0x7400000
+INFO:    Image id=43 loaded: 0x7400000 - 0x7463128
+INFO:    BL2: Loading image id 44
+VERBOSE: Using Memmap
+VERBOSE: FIP header looks OK.
+VERBOSE: Using FIP
+INFO:    Loading image id=44 at address 0x7600000
+INFO:    Image id=44 loaded: 0x7600000 - 0x7663128
+NOTICE:  BL1: Booting BL31
+INFO:    Entry point address = 0x4003000
+INFO:    SPSR = 0x3cd
+VERBOSE: Argument #0 = 0x4002e78
+VERBOSE: Argument #1 = 0x4001010
+VERBOSE: Argument #2 = 0x7f00000
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+INFO:    BL31 FCONF: FW_CONFIG address = 4001010
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x4001010
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x1800
+VERBOSE: 	config-id = 24
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 7f00000
+VERBOSE: 	max-size = 0x4000
+VERBOSE: 	config-id = 23
+VERBOSE: 	secondary-load-address = 82000000
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001300
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 25
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 4001500
+VERBOSE: 	max-size = 0xb00
+VERBOSE: 	config-id = 26
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: FCONF: dyn_cfg.dtb_registry cell found with:
+VERBOSE: 	load-address = 80000000
+VERBOSE: 	max-size = 0x200
+VERBOSE: 	config-id = 27
+VERBOSE: Couldn't find property secondary-load-address in dtb
+VERBOSE: Generic delay timer configured with mult=1 and div=100
+VERBOSE: Skip SMMU GPC configuration.
+VERBOSE: Region: 0x4003000 - 0x4029000 has attributes 0xa
+VERBOSE: Region: 0x4003000 - 0x4014000 has attributes 0x2
+VERBOSE: Region: 0x4014000 - 0x4017000 has attributes 0x42
+VERBOSE: Region: 0x4028000 - 0x4029000 has attributes 0x8
+INFO:    FCONF: Reading HW_CONFIG firmware configuration file from: 0x7f00000
+INFO:    FCONF: Reading firmware configuration information for: pci_props
+WARNING: FCONF: Unable to locate 'pci' node
+INFO:    FCONF: Reading firmware configuration information for: dram_layout
+INFO:    FCONF: Reading firmware configuration information for: cpu_timer
+INFO:    FCONF: Reading firmware configuration information for: uart_config
+VERBOSE: FCONF: UART node address: a0000
+VERBOSE: DT: Translation lookup in node iofpga-bus@300000000 at offset 2636
+VERBOSE: DT: Address 0 mapped to 300000000 with range 210000
+VERBOSE: DT: child address 0mapped to 300000000 in parent bus
+VERBOSE: DT: Translation lookup in node motherboard-bus@8000000 at offset 2192
+VERBOSE: DT: Address 0 mapped to 8000000 with range 4000000
+VERBOSE: DT: Address 100000000 mapped to 14000000 with range 4000000
+VERBOSE: DT: Address 200000000 mapped to 18000000 with range 4000000
+VERBOSE: DT: Address 300000000 mapped to 1c000000 with range 4000000
+VERBOSE: DT: child address 300000000mapped to 1c000000 in parent bus
+VERBOSE: DT: Translation lookup in node bus@8000000 at offset 564
+VERBOSE: DT: Address 8000000 mapped to 8000000 with range 18000000
+VERBOSE: DT: child address 8000000mapped to 8000000 in parent bus
+VERBOSE: FCONF: UART serial device base address: 1c0a0000
+VERBOSE: FCONF: UART serial device clk frequency: 16e3600
+INFO:    FCONF: Reading firmware configuration information for: topology
+VERBOSE: CLUSTER ID: 0 cpu-count: 4
+VERBOSE: CLUSTER ID: 1 cpu-count: 4
+INFO:    FCONF: Reading firmware configuration information for: gicv3_config
+NOTICE:  BL31: v2.15.0(debug):a5c580fd5
+NOTICE:  BL31: Built : 22:28:03, Sep 21 2026
+INFO:    GICv3 without legacy support detected.
+INFO:    ARM GICv3 driver initialized in EL3
+INFO:    Maximum SPI INTID supported: 255
+INFO:    Maximum ESPI INTID supported: 5119
+INFO:    BL31: Initializing runtime services
+VERBOSE: Reading SPM Core manifest at address 0x4001500
+VERBOSE: SPM Core manifest attribute section:
+VERBOSE:   version: 1.2
+VERBOSE:   spmc_id: 0x8000
+VERBOSE:   binary_size: 0x80000
+VERBOSE:   load_address: 0x6000000
+VERBOSE:   entrypoint: 0x6000000
+VERBOSE: FFA version (1.2)
+VERBOSE: SPM Core run time EL2.
+VERBOSE: SPM Core execution state 0x0.
+INFO:    SPM Core setup done.
+INFO:    BL31: Initializing BL32
+VERBOSE: SPM Core init start.
+INFO: Initializing Hafnium (SPMC)
+INFO: text: 0x6000000 - 0x602e000
+INFO: rodata: 0x602e000 - 0x6038000
+INFO: data: 0x6038000 - 0x6146000
+INFO: stacks: 0x6150000 - 0x6160000
+INFO: Supported bits in physical address: 40
+INFO: Stage 2 has 4 page table levels with 2 pages at the root.
+INFO: Stage 1 has 5 page table levels with 1 pages at the root.
+VERBOSE: SPM(0): 0xc4000087 0x60016a4 0x0 0x0 0x0 0x0 0x0 0x0
+VERBOSE: spmd_pm_secondary_ep_register 60016a4
+INFO: Memory range:  0xfd000000 - 0xfeffffff
+INFO: Memory range:  0x7000000 - 0x7ffffff
+INFO: Memory range:  0xff000000 - 0xffffffff
+INFO: Arm SMMUv3 initialized
+INFO: Unable to find '/interrupt-controller. Using default configuration.'
+INFO: Loading VM id 0x8001: ff-a-acs SP1 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7000000.
+INFO: Loading VM id 0x8002: ff-a-acs SP2 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7200000.
+INFO: Loading VM id 0x8003: ff-a-acs SP3 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7400000.
+INFO: Loading VM id 0x8004: ff-a-acs SP4 - mem_size: 200000.
+INFO: Loaded with 1 vCPUs, entry at 0x7600000.
+VERBOSE: SPM(0): 0x84000069 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+INFO: Hafnium initialisation completed
+[8001 0] EL0 entry.. id 8001
+[8002 0] EL0 entry.. id 8002
+[8003 0] EL0 entry.. id 8003
+[8004 0] EL0 entry.. id 8004
+NOTICE: Finished bootstrapping all SPs on CPU0
+VERBOSE: SPM(0): 0x8400006b 0x0 0x0 0x0 0x0 0x0 0x0 0x0
+VERBOSE: SPM Core init end.
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x88000000
+INFO:    SPSR = 0x3c9
+VERBOSE: Argument #0 = 0x82000000
+VERBOSE: Argument #1 = 0x0
+VERBOSE: Argument #2 = 0x0
+VERBOSE: Argument #3 = 0x0
+VERBOSE: Argument #4 = 0x0
+VERBOSE: Argument #5 = 0x0
+VERBOSE: Argument #6 = 0x0
+VERBOSE: Argument #7 = 0x0
+
+
+U-Boot 2026.07-gece349ade297 (Sep 21 2026 - 22:24:05 +0530) arm_fvp
+
+Model: FVP Base
+DRAM:  2 GiB (total 4 GiB)
+Core:  25 devices, 13 uclasses, devicetree: board
+MMC:   
+Loading Environment from nowhere... OK
+In:    serial@90000
+Out:   serial@90000
+Err:   serial@90000
+Net:   No ethernet found.
+[2KHit any key to stop autoboot: 2[2KHit any key to stop autoboot: 0
+=> sa  booti 0x80080000 0x84000000 0x82000000
+Moving Image from 0x80080000 to 0x80200000, end=0x82b70000
+Wrong Ramdisk Image Format
+Ramdisk image is corrupt or invalid
+=> booti 0x80080000 0x84000000 0x82000000: 0x820000000 0x82000000x 0x820000002 0x820000003 0x820000007 0x820000002 0x820000001 0x820000007 0x82000000 0x
+Moving Image from 0x80080000 to 0x80200000, end=0x82b70000
+ERROR: Did not find a cmdline Flattened Device Tree
+Could not find a valid device tree
+=> fdt addr <INTERRUPT>
+=> printenv kernel_addr_r fdt_addrr _r ramdisk_addr_r
+kernel_addr_r=0x80080000
+fdt_addr_r=0x8fc00000
+ramdisk_addr_r=0x8fe00000
+=> 
