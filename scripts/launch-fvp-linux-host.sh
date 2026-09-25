@@ -31,13 +31,27 @@ LOG_DIR="$LOG_ROOT/$RUN_ID"
 
 mkdir -p $LOG_DIR
 
-# Each UART gets its own Kitty terminal. Telnet connects to the FVP terminal server.
-FVP_TERMINAL_CONFIG=(
-    -C 'bp.terminal_0.terminal_command=kitty --title "%title" telnet localhost %port'
-    -C 'bp.terminal_1.terminal_command=kitty --title "%title" telnet localhost %port'
-    -C 'bp.terminal_2.terminal_command=kitty --title "%title" telnet localhost %port'
-    -C 'bp.terminal_3.terminal_command=kitty --title "%title" telnet localhost %port'
-)
+# Each UART gets its own Kitty terminal. Telnet connects to the FVP terminal server, utilizing tmux pane arrangement
+# Prefer tmux when available, otherwise Kitty, and if none then FVP default
+
+if [[ -n "${TMUX:-}" ]]; then
+    FVP_TERMINAL_COMMAND="$ROOT/scripts/fvp-tmux-term.sh %port"
+elif command -v kitty >/dev/null 2>&1; then
+    FVP_TERMINAL_COMMAND='kitty --title "%title" telnet localhost %port'
+else
+    FVP_TERMINAL_COMMAND=""
+fi
+
+FVP_TERMINAL_CONFIG=()
+
+if [[ -n "$FVP_TERMINAL_COMMAND" ]]; then
+    FVP_TERMINAL_CONFIG=(
+        -C "bp.terminal_0.terminal_command=$FVP_TERMINAL_COMMAND"
+        -C "bp.terminal_1.terminal_command=$FVP_TERMINAL_COMMAND"
+        -C "bp.terminal_2.terminal_command=$FVP_TERMINAL_COMMAND"
+        -C "bp.terminal_3.terminal_command=$FVP_TERMINAL_COMMAND"
+    )
+fi
 
 "$FVP" \
 	-C pctl.startup=0.0.0.0 \
