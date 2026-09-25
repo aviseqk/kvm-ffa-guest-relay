@@ -27,6 +27,7 @@ FVP_DTB="arm/fvp-base-revc.dtb"
 
 LINUX_TARGETS=(Image)
 LINUX_TARGETS+=(scripts_gdb)
+#LINUX_TARGETS+=(modules)
 LINUX_TARGETS+=("$FVP_DTB")
 
 ARCH=arm64
@@ -54,3 +55,12 @@ make -j"$JOBS" \
 	ARCH="$ARCH" \
 	CROSS_COMPILE="$CROSS_COMPILE" \
 	"${LINUX_TARGETS[@]}"
+
+# install the built modules in rootfs
+#make \
+#	-C "$LINUX_SRC" \
+#	O="$OUT_DIR" \
+#	ARCH="$ARCH" \
+#	CROSS_COMPILE="$CROSS_COMPILE" \
+#	INSTALL_MOD_PATH="$ROOT/out/buildroot/target" \
+#	modules_install
