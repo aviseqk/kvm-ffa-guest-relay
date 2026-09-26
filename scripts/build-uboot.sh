@@ -26,7 +26,7 @@ make -C "$ROOT/u-boot" \
 
 
 # adding config values to u-boot's own compile-time env-variables for boot-automation
-"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'booti ${kernel_addr_r} ${ramdisk_addr_r}:0x1ee448 ${fdt_addr_r}'
+"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'booti ${kernel_addr_r} ${ramdisk_addr_r}:0x12e57ca ${fdt_addr_r}'
 "$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 0
 
 #"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \

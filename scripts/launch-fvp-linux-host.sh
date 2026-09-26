@@ -16,7 +16,7 @@ FIP="$ROOT/out/tf-a/fvp/debug/fip.bin"
 
 LINUX_HOST_IMAGE="$ROOT/out/linux/host/arch/arm64/boot/Image"
 LINUX_HOST_DTB="$ROOT/out/linux/host/arch/arm64/boot/dts/arm/fvp-base-revc.dtb"
-LINUX_HOST_INITRD="$ROOT/out/buildroot/images/rootfs.cpio.gz"
+LINUX_HOST_INITRD="$ROOT/out/buildroot/kvm-host/images/rootfs.cpio.gz"
 
 # U-Boot recommended addresses(as per linux's fvp-base-revc.dtb) : kernel_addr_r=0x80080000 fdt_addr_r=0x8fc00000 ramdisk_addr_r=0x8fe00000
 FVP_LINUX_HOST_BOOT_CONFIG=(
