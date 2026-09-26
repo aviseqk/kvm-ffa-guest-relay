@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        echo "Starting getty on ttyAMA2"
+        /sbin/getty -L ttyAMA2 115200 vt100 &
+        ;;
+esac
