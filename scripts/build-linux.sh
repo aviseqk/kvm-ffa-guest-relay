@@ -28,7 +28,10 @@ FVP_DTB="arm/fvp-base-revc.dtb"
 LINUX_TARGETS=(Image)
 LINUX_TARGETS+=(scripts_gdb)
 #LINUX_TARGETS+=(modules)
-LINUX_TARGETS+=("$FVP_DTB")
+
+if [[ "$BUILD_TYPE" == "host" ]]; then
+    LINUX_TARGETS+=("$FVP_DTB")
+fi
 
 ARCH=arm64
 CROSS_COMPILE=aarch64-none-linux-gnu-
