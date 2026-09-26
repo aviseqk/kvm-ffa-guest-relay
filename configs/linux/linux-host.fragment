@@ -1,5 +1,6 @@
 # Fragment of linux defconfigs (applied on top of the linux arm64 base defconfig) for Linux KVM Host Kernel
 
+CONFIG_LOCALVERSION="-kvm-host"
 
 # Enable Modules Support
 CONFIG_MODULES=y
