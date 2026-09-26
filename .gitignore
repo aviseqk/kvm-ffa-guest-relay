@@ -1,2 +1,8 @@
 out/
 devel-logs/
+Image
+rootfs*.cpio
+rootfs*.cpio.gz
+rootfs*.ext2
+rootfs*.ext4
+rootfs*.tar
