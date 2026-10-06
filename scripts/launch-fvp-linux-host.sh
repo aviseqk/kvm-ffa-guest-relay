@@ -13,16 +13,42 @@ FVP="FVP_Base_RevC-2xAEMvA"
 BL1="$ROOT/out/tf-a/fvp/debug/bl1.bin" 
 FIP="$ROOT/out/tf-a/fvp/debug/fip.bin" 
 
-
 LINUX_HOST_IMAGE="$ROOT/out/linux/host/arch/arm64/boot/Image"
 LINUX_HOST_DTB="$ROOT/out/linux/host/arch/arm64/boot/dts/arm/fvp-base-revc.dtb"
 LINUX_HOST_INITRD="$ROOT/out/buildroot/kvm-host/images/rootfs.cpio.gz"
 
+LINUX_HOST_INITRD_SIZE="$(stat -c '%s' "$LINUX_HOST_INITRD")"
+LINUX_HOST_INITRD_SIZE_HEX="$(printf '0x%x' "$LINUX_HOST_INITRD_SIZE")"
+
+BOOT_CMD_TEMPLATE="$ROOT/configs/host-boot.cmd"
+BOOT_CMD_RUNTIME="$ROOT/out/uboot/host-boot-runtime.cmd"
+BOOT_SCRIPT="$ROOT/out/uboot/host-boot.scr"
+MKIMAGE="$ROOT/out/uboot/tools/mkimage"
+
+# Substitute the initramfs size into the text template.
+sed "s/@INITRD_SIZE@/$LINUX_HOST_INITRD_SIZE_HEX/g" \
+    "$BOOT_CMD_TEMPLATE" > "$BOOT_CMD_RUNTIME"
+
+"$MKIMAGE" -A arm64 \
+    -T script -C none \
+    -n "Linux host boot configuration" \
+    -d "$BOOT_CMD_RUNTIME" \
+    "$BOOT_SCRIPT"
+
+BOOT_SCRIPT_ADDR=0x8f000000
 # U-Boot recommended addresses(as per linux's fvp-base-revc.dtb) : kernel_addr_r=0x80080000 fdt_addr_r=0x8fc00000 ramdisk_addr_r=0x8fe00000
 FVP_LINUX_HOST_BOOT_CONFIG=(
     --data cluster0.cpu0="$LINUX_HOST_IMAGE@0x80080000"
     --data cluster0.cpu0="$LINUX_HOST_DTB@0x8fc00000"
     --data cluster0.cpu0="$LINUX_HOST_INITRD@0x8fe00000"
+    --data cluster0.cpu0="$BOOT_SCRIPT@$BOOT_SCRIPT_ADDR"
+)
+
+FVP_IRIS_CONFIG=(
+    --iris-server
+    --iris-port 7100 
+    -p 
+    -R
 )
 
 LOG_ROOT="$ROOT/devel-logs/fvp"
@@ -44,14 +70,25 @@ fi
 
 FVP_TERMINAL_CONFIG=()
 
+#LINUX_HOST_VMLINUX="$ROOT/out/linux/host/vmlinux"
+#FVP_KGDB_COMMAND="$ROOT/scripts/fvp-tmux-kgdb.sh %port $LINUX_HOST_VMLINUX"
+# -C "bp.terminal_3.terminal_command=$FVP_KGDB_COMMAND"
+
 if [[ -n "$FVP_TERMINAL_COMMAND" ]]; then
     FVP_TERMINAL_CONFIG=(
         -C "bp.terminal_0.terminal_command=$FVP_TERMINAL_COMMAND"
         -C "bp.terminal_1.terminal_command=$FVP_TERMINAL_COMMAND"
         -C "bp.terminal_2.terminal_command=$FVP_TERMINAL_COMMAND"
-        -C "bp.terminal_3.terminal_command=$FVP_TERMINAL_COMMAND"
     )
 fi
+
+FVP_DEBUG_CONSOLE_CONFIG=(
+	   -C bp.pl011_uart3.uart_enable=1
+	   -C bp.terminal_3.mode=raw
+	   -C bp.terminal_3.start_telnet=0
+	   -C bp.pl011_uart3.out_file="$LOG_DIR/uart3.log"
+    )
+
 
 "$FVP" \
 	-C pctl.startup=0.0.0.0 \
@@ -79,4 +116,6 @@ fi
 	-C cluster0.gicv3.extended-interrupt-range-support=1 -C cluster1.gicv3.extended-interrupt-range-support=1 \
 	-C gic_distributor.extended-ppi-count=64 -C gic_distributor.extended-spi-count=1024 -C gic_distributor.ARE-fixed-to-one=1 \
 	"${FVP_TERMINAL_CONFIG[@]}" \
-	"${FVP_LINUX_HOST_BOOT_CONFIG[@]}"
+	"${FVP_LINUX_HOST_BOOT_CONFIG[@]}" \
+	"${FVP_DEBUG_CONSOLE_CONFIG[@]}" \
+	"${FVP_IRIS_CONFIG[@]}"

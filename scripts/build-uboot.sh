@@ -26,14 +26,17 @@ make -C "$ROOT/u-boot" \
 
 
 # adding config values to u-boot's own compile-time env-variables for boot-automation
-"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'booti ${kernel_addr_r} ${ramdisk_addr_r}:0x12e57ca ${fdt_addr_r}'
-"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 0
+"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'source 0x8f000000'
+"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 3
+
+#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'booti ${kernel_addr_r} ${ramdisk_addr_r}:0x12e64d0 ${fdt_addr_r}'
+#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 0
 
 #"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
 #	--enable USE_BOOTARGS
 
 #"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
-#	--set-str BOOTARGS 'kvm-arm.mode=none'
+#	--set-str BOOTARGS 'kvm-arm.mode=protected kgdboc=ttyAMA3,115200 kgdbwait'
 
 # ramdisk_size is a env variable we created for our rootfs size, but instead of a precise size, assigning a fixed but big upper bound to it.
 # TODO: figure out a way to provide this to U-Boot as env value "$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str EXTRA_ENV_SETTINGS 'ramdisk_size=0x400000'
