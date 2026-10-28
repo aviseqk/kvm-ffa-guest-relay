@@ -8,14 +8,28 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 JOBS="${JOBS:-$(nproc)}"
 echo "Using $JOBS parallel job(s)"
 
-OUTPUT_DIR="$ROOT/out/uboot"
-
-DEFCONFIG=vexpress_fvp_defconfig
-
+PLATFORM="${PLATFORM:-fvp}"
 ARCH="arm"
 CROSS_COMPILE="aarch64-none-linux-gnu-"
 
+case "$PLATFORM" in
+	fvp)
+		OUTPUT_DIR="$ROOT/out/uboot"
+		DEFCONFIG="vexpress_fvp_defconfig"
+		;;
+	qemu)
+		OUTPUT_DIR="$ROOT/out/qemu/uboot"
+		DEFCONFIG="qemu_arm64_defconfig"
+		;;
+	*)
+		echo "Unsupported Platform: expected fvp or qemu" >&2
+		exit 2
+		;;
+esac
+
 mkdir -p "$OUTPUT_DIR"
+
+echo "U-Boot build: platform=$PLATFORM defconfig=$DEFCONFIG output=$OUTPUT_DIR"
 
 make -C "$ROOT/u-boot" \
 	-j"$JOBS" \
@@ -24,29 +38,17 @@ make -C "$ROOT/u-boot" \
 	CROSS_COMPILE="$CROSS_COMPILE" \
 	"$DEFCONFIG"
 
-
 # adding config values to u-boot's own compile-time env-variables for boot-automation
-"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'source 0x8f000000'
-"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 3
+if [[ "$PLATFORM" == fvp ]]; then
+	"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
+		--set-str BOOTCOMMAND 'source 0x8f000000'
+else
+	"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
+		--set-str BOOTCOMMAND 'source 0x47f00000'
+fi
 
-#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str BOOTCOMMAND 'booti ${kernel_addr_r} ${ramdisk_addr_r}:0x12e64d0 ${fdt_addr_r}'
-#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-val BOOTDELAY 0
-
-#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
-#	--enable USE_BOOTARGS
-
-#"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
-#	--set-str BOOTARGS 'kvm-arm.mode=protected kgdboc=ttyAMA3,115200 kgdbwait'
-
-# ramdisk_size is a env variable we created for our rootfs size, but instead of a precise size, assigning a fixed but big upper bound to it.
-# TODO: figure out a way to provide this to U-Boot as env value "$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" --set-str EXTRA_ENV_SETTINGS 'ramdisk_size=0x400000'
-
-#make -C "$ROOT/u-boot" \
-#	-j"$JOBS" \
-#	O="$OUTPUT_DIR" \
-#	ARCH="$ARCH" \
-#	CROSS_COMPILE="$CROSS_COMPILE" \
-#	olddefconfig
+"$ROOT/u-boot/scripts/config" --file "$OUTPUT_DIR/.config" \
+		--set-val BOOTDELAY 3
 
 make -C "$ROOT/u-boot" \
 	-j"$JOBS" \
