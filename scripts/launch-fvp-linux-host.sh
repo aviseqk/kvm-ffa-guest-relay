@@ -20,7 +20,7 @@ LINUX_HOST_INITRD="$ROOT/out/buildroot/kvm-host/images/rootfs.cpio.gz"
 LINUX_HOST_INITRD_SIZE="$(stat -c '%s' "$LINUX_HOST_INITRD")"
 LINUX_HOST_INITRD_SIZE_HEX="$(printf '0x%x' "$LINUX_HOST_INITRD_SIZE")"
 
-BOOT_CMD_TEMPLATE="$ROOT/configs/host-boot.cmd"
+BOOT_CMD_TEMPLATE="$ROOT/configs/fvp-host-boot.cmd"
 BOOT_CMD_RUNTIME="$ROOT/out/uboot/host-boot-runtime.cmd"
 BOOT_SCRIPT="$ROOT/out/uboot/host-boot.scr"
 MKIMAGE="$ROOT/out/uboot/tools/mkimage"
