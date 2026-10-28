@@ -1,0 +1,37 @@
+/* SP manifest for our minimal FF-A Secure Partition in QEMU (at S-EL0)
+
+NOTE: This is the FF-A partition manifest for the SP,
+    that is consumed by the SPMC, and this is not the SPMC
+    manifest that it a definition for Hafnium about how to use the associated
+    resources, the said partitions, etc 
+
+Document Link: https://trustedfirmware-a.readthedocs.io/en/latest/components/ffa-manifest-binding.html
+
+*/
+
+/dts-v1/;
+
+/ {
+    compatible = "arm,ffa-manifest-1.1";
+
+    description = "Minimal QEMU FF-A SP";
+    ffa-version = <00010002>;
+    uuid = <0x3296143f 0x894a174e 0x9c701b6e 0x4a5299ae>;
+    id = <1>;
+    execution-ctx-count = <1>;
+    exception-level = <1>;
+    execution-state = <0>;
+    load-address = <0x0 0x0e300000>;    // TODO: confirm this
+    entrypoint-offset = <0x0>;
+    xlat-granule = <0>;
+    messaging-method = <0x3>;   /* only support direct messaging's send and receive */
+    ns-interrupts-action = <2>;
+
+    memory-regions {
+        compatible = "arm,ffa-manifest-memory-regions";
+    };
+
+
+
+}
+

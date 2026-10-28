@@ -1,0 +1,117 @@
+/*
+ * QEMU S-EL2 SPMC manifest for Hafnium
+ *
+ * INFO: has one FF-A secure partition i.e. minimal_sp
+ *
+ * Adapted from the upstream QEMU S-EL2 manifest
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+/dts-v1/;
+
+/ {
+    compatible = "arm,ffa-core-manifest-1.0";
+    #address-cells = <2>;
+    #size-cells = <2>;
+
+    attribute {
+        spmc_id = <0x8000>;
+        maj_ver = <0x1>;
+        min_ver = <0x1>;
+        exec_state = <0x0>;
+        load_address = <0x0 0x0e100000>;
+        entrypoint = <0x0 0x0e100000>;
+        binary_size = <0x80000>;
+    };
+
+    hypervisor {
+        compatible = "hafnium,hafnium";
+
+        /* My single FF-A Secure Partition */
+
+        vm1 {
+            is_ffa_partition;
+            debug_name = "minimal_sp";
+            load_address = <0x0e300000>;
+            vcpu_count = <1>;
+            /* 2MiB working-memory allocation for the SP package */
+            mem_size = <2097152>;
+        };
+    };
+
+    cpus {
+        #address-cells = <2>;
+        #size-cells = <0>;
+
+        cpu@0 {
+            reg = <0x0 0x0>;
+        };
+
+        cpu@3 {
+            reg = <0x0 0x3>;
+        };
+
+        cpu@2 {
+            reg = <0x0 0x2>;
+        };
+
+        cpu@1 {
+            reg = <0x0 0x1>;
+        };
+    };
+
+    /* INFO: Initial Plan: QEMU virt secure memory: 0x0e000000 - 0x0effffff. but, THIS ERRORED OUT */
+    /* NOTE: using single secure_region memory as pointed above led to an error, 
+    because Hafnium image and its runtime data was using part of the above declared memory region
+	
+    logs showed hafnium image started at 0xe100000, its data extended to 0xe222000, and its stacks
+    occupied 0xe230000–0xe240000
+
+    The rules of Hafnium manifest say that available memory ranges had to exclude the memory used
+    by the SPMC aka Hafnium itself, hence we made the secure memory region accomodate that
+
+    0x0e000000–0x0e0fffff -> 1 MiB memory available before Hafnium
+    0x0e100000–0x0e23ffff -> Reserved for hafnium image and runtime, no node for this range
+    0x0e240000–0x0effffff -> Remaninig available secure memory
+    */
+
+        /*
+     * QEMU secure RAM: 0x0e000000 - 0x0f000000.
+     *
+     * Hafnium occupies 0x0e100000 - 0x0e240000.
+     * The remaining pool begins at 0x0e240000 and includes:
+     *   - available space before the SP allocations
+     *   - SP1-SP4 allocations: 0x0e300000 - 0x0eb00000
+     *   - available space after the SP allocations
+     *
+     * Hafnium tracks partition allocations and declared memory regions
+     * separately to detect overlaps.
+     */
+    memory@e240000 {
+        device_type = "memory";
+        reg = <0x0 0x0e240000 0x0 0x00dc0000>;
+    };
+    /*
+    memory@e240000 {
+	    device_type = "memory";
+	    reg = <0 0x0e240000 0 0x000c0000>;
+    };
+
+    memory@eb00000 {
+	    device_type = "memory";
+	    reg = <0 0x0eb00000 0 0x00500000>;
+    };
+    */
+
+    /* QEMU virt non-secure RAM. */
+    memory@1 {
+        device_type = "ns-memory";
+        reg = <0x0 0x40000000 0x1 0x00000000>;
+    };
+
+    /* Address space below the secure-memory region. */
+    memory@2 {
+        device_type = "device-memory";
+        reg = <0x0 0x00000000 0x0 0x0e000000>;
+    };
+};

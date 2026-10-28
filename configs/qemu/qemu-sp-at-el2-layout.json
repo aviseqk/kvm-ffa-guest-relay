@@ -1,0 +1,7 @@
+{
+  "sp1": {
+    "image": "../../out/minimal-sp/minimal_sp.bin",
+    "pm": "../../configs/qemu/minimal-sp/minimal_sp_manifest.dts",
+    "owner": "SiP"
+  }
+}
