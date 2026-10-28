@@ -27,7 +27,7 @@ case "$PLATFORM" in
 		BL33="$ROOT/out/uboot/u-boot.bin"
 		# Hafnium artifacts
 		BL32="$ROOT/out/hafnium/fvp/secure_aem_v8a_fvp_vhe_clang/hafnium.bin"
-		SP_LAYOUT="$ROOT/configs/sp-at-el0-layout.json"
+		SP_LAYOUT="$ROOT/configs/fvp/sp-at-el0-layout.json"
 		SPMC_MANIFEST="$ROOT/ff-a-acs/platform/manifest/tgt_tfa_fvp/fvp_spmc_manifest_el0.dts"
 		SP_LIST="$BUILD_BASE/$PLAT/$BUILD_TYPE/sp_list_fragment.dts"
 
