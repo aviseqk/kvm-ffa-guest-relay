@@ -24,7 +24,7 @@ case "$PLATFORM" in
 		PLAT=fvp
 
 		# UBoot artifacts
-		BL33="$ROOT/out/uboot/u-boot.bin"
+		BL33="$ROOT/out/uboot/fvp/u-boot.bin"
 		# Hafnium artifacts
 		BL32="$ROOT/out/hafnium/fvp/secure_aem_v8a_fvp_vhe_clang/hafnium.bin"
 		SP_LAYOUT="$ROOT/configs/fvp/sp-at-el0-layout.json"
@@ -61,7 +61,7 @@ case "$PLATFORM" in
 	qemu)
 		PLAT=qemu
 
-		BL33="$ROOT/out/qemu/uboot/u-boot.bin"
+		BL33="$ROOT/out/uboot/qemu/u-boot.bin"
 		BL32="$ROOT/out/hafnium/qemu/secure_qemu_aarch64_clang/hafnium.bin"
 
 		SP_LAYOUT="$ROOT/configs/qemu/optee-as-sp/sp_layout.json"

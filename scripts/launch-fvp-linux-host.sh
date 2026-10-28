@@ -21,9 +21,9 @@ LINUX_HOST_INITRD_SIZE="$(stat -c '%s' "$LINUX_HOST_INITRD")"
 LINUX_HOST_INITRD_SIZE_HEX="$(printf '0x%x' "$LINUX_HOST_INITRD_SIZE")"
 
 BOOT_CMD_TEMPLATE="$ROOT/configs/fvp-host-boot.cmd"
-BOOT_CMD_RUNTIME="$ROOT/out/uboot/host-boot-runtime.cmd"
-BOOT_SCRIPT="$ROOT/out/uboot/host-boot.scr"
-MKIMAGE="$ROOT/out/uboot/tools/mkimage"
+BOOT_CMD_RUNTIME="$ROOT/out/uboot/fvp/host-boot-runtime.cmd"
+BOOT_SCRIPT="$ROOT/out/uboot/fvp/host-boot.scr"
+MKIMAGE="$ROOT/out/uboot/fvp/tools/mkimage"
 
 # Substitute the initramfs size into the text template.
 sed "s/@INITRD_SIZE@/$LINUX_HOST_INITRD_SIZE_HEX/g" \

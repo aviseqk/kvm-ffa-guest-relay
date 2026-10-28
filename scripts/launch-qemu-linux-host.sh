@@ -20,9 +20,9 @@ LINUX_HOST_INITRD_SIZE_HEX="$(printf '0x%x' "$LINUX_HOST_INITRD_SIZE")"
 TFA_BIOS="$ROOT/out/tf-a/qemu/debug/qemu_fw.bios"
 
 BOOT_CMD_TEMPLATE="$ROOT/configs/qemu-host-boot.cmd"
-BOOT_CMD_RUNTIME="$ROOT/out/qemu/uboot/host-boot-runtime.cmd"
-BOOT_SCRIPT="$ROOT/out/qemu/uboot/host-boot.scr"
-MKIMAGE="$ROOT/out/qemu/uboot/tools/mkimage"
+BOOT_CMD_RUNTIME="$ROOT/out/uboot/qemu/host-boot-runtime.cmd"
+BOOT_SCRIPT="$ROOT/out/uboot/qemu/host-boot.scr"
+MKIMAGE="$ROOT/out/uboot/qemu/tools/mkimage"
 
 KERNEL_ADDR=0x40200000
 BOOT_SCRIPT_ADDR=0x47f00000

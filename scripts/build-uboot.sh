@@ -14,11 +14,11 @@ CROSS_COMPILE="aarch64-none-linux-gnu-"
 
 case "$PLATFORM" in
 	fvp)
-		OUTPUT_DIR="$ROOT/out/uboot"
+		OUTPUT_DIR="$ROOT/out/uboot/fvp"
 		DEFCONFIG="vexpress_fvp_defconfig"
 		;;
 	qemu)
-		OUTPUT_DIR="$ROOT/out/qemu/uboot"
+		OUTPUT_DIR="$ROOT/out/uboot/qemu"
 		DEFCONFIG="qemu_arm64_defconfig"
 		;;
 	*)
