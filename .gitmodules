@@ -19,3 +19,9 @@
 [submodule "tools/kvmtool"]
 	path = tools/kvmtool
 	url = https://git.kernel.org/pub/scm/linux/kernel/git/will/kvmtool.git
+[submodule "optee_os"]
+	path = optee_os
+	url = https://github.com/aviseqk/optee_os.git
+[submodule "third_party/qemu-11.1.2"]
+	path = third_party/qemu-11.1.2
+	url = git@github.com:aviseqk/qemu.git
