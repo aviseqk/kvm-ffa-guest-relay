@@ -1,0 +1,6 @@
+{
+	"op-tee" : {
+		"image": "../../../out/optee/core/tee-raw.bin",
+		"pm": "optee_sp_manifest.dts"
+	}
+}
